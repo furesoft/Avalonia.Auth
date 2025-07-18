@@ -32,9 +32,11 @@
     </Style>
 
     <Style Selector="controls|AuthProviderButton[IconOnly=True]">
+        <Setter Property="Margin" Value="2" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
+                        Margin="{TemplateBinding Margin}"
                         CornerRadius="90"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"

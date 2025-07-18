@@ -13,6 +13,7 @@
             <ControlTemplate>
                 <Border x:Name="PART_Border"
                         CornerRadius="10"
+                        HorizontalAlignment="Center"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
                         Background="{TemplateBinding Background}"
