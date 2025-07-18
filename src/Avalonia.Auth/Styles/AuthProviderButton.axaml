@@ -35,7 +35,6 @@
         <Setter Property="Margin" Value="2" />
         <Setter Property="Template">
             <ControlTemplate>
-                <!-- Tooltip doesnt work -->
                 <Border x:Name="PART_Border"
                         ToolTip.Tip="{TemplateBinding Label}"
                         Margin="{TemplateBinding Margin}"

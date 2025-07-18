@@ -24,7 +24,7 @@ class Program
             .WithAuth(_ =>
             {
                 _.ShowRegisterLink = false;
-                _.MinimalMode = false;
+                _.MinimalMode = true;
 
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();
