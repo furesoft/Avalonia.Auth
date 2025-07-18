@@ -27,11 +27,9 @@ public class AuthContext : TemplatedControl
 
     public AuthContext()
     {
-        var providers = Locator.Current.GetServices<AuthProvider>();
-        Providers = new ObservableCollection<AuthProvider>(providers);
-
         Options = Locator.Current.GetService<AuthOptions>()!;
         MinimalMode = Options.MinimalMode;
+        Providers = new ObservableCollection<AuthProvider>(Options.Providers);
     }
 
     public ItemsPanelTemplate ItemsPanel

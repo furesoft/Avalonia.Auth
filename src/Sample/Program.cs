@@ -23,10 +23,10 @@ class Program
                 _.Title = "Login";
                 _.ShowRegisterLink = false;
                 _.MinimalMode = true;
+                _.UseAuthProvider<GoogleProvider>();
+                _.UseAuthProvider<GithubProvider>();
+                _.UseAuthProvider<HelloProvider>();
             })
-            .UseAuthProvider<GoogleProvider>()
-            .UseAuthProvider<GithubProvider>()
-            .UseAuthProvider<HelloProvider>()
             .WithInterFont()
             .LogToTrace();
 }
