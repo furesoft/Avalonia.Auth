@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Avalonia.Auth/Controls/AuthProviderButton.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Default.axaml" value="Sample/Sample.csproj" />
+        <entry key="Sample/App.axaml" value="Sample/Sample.csproj" />
+        <entry key="Sample/MainWindow.axaml" value="Sample/Sample.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

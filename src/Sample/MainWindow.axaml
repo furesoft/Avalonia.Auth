@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Sample.MainWindow"
+        Title="Sample">
+    <StackPanel Margin="20" Spacing="20">
+        <controls:AuthProviderButton Title="Sign in with Google"
+                                     Icon="avares://Sample/Assets/google.png"
+                                     ProviderName="Google"
+                                     Background="#fbbc05" />
+        <controls:AuthProviderButton Title="Sign in with Github"
+                                     Icon="avares://Sample/Assets/github.png"
+                                     ProviderName="Github"
+                                     Background="#24292e" />
+    </StackPanel>
+</Window>

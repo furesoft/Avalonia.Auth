@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "t42ObGFmsx8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Avalonia.Auth\\Avalonia.Auth.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chris\\.nuget\\packages\\avalonia\\11.1.0\\avalonia.11.1.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\avalonia.buildservices\\0.0.29\\avalonia.buildservices.0.0.29.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\avalonia.remote.protocol\\11.1.0\\avalonia.remote.protocol.11.1.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\splat\\15.4.1\\splat.15.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
