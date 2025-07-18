@@ -68,3 +68,4 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.csproj.Up2Date
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.genruntimeconfig.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\ref\Sample.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\CommunityToolkit.Mvvm.dll

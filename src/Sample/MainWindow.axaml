@@ -3,10 +3,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
+        xmlns:sample="clr-namespace:Sample"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Sample.MainWindow"
         Title="Sample">
-    <StackPanel Margin="20" Spacing="20">
-        <controls:AuthContext />
+    <Window.DataContext>
+        <sample:MainWindowViewModel />
+    </Window.DataContext>
+    <StackPanel Margin="20" Spacing="20" x:DataType="sample:MainWindowViewModel">
+        <controls:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
+                              IsVisible="{Binding !IsAuthenticated}" />
+        <TextBlock Text="Logged in" IsVisible="{Binding IsAuthenticated}" />
     </StackPanel>
 </Window>
