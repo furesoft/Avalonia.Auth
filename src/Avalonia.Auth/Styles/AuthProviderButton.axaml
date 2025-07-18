@@ -3,10 +3,10 @@
         xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
 
     <Style Selector="controls|AuthProviderButton">
-        <Setter Property="BorderBrush" Value="#B0C4DE"></Setter>
-        <Setter Property="Background" Value="White"></Setter>
-        <Setter Property="CornerRadius" Value="10"></Setter>
-        <Setter Property="Foreground" Value="Black"></Setter>
+        <Setter Property="BorderBrush" Value="#B0C4DE" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Foreground" Value="Black" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <ControlTemplate>
@@ -20,7 +20,7 @@
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
                         <Image Source="{TemplateBinding Icon}"
                                Width="28" Height="28" Margin="0,0,6,0" />
-                        <TextBlock Text="{TemplateBinding Title}"
+                        <TextBlock Text="{TemplateBinding Label}"
                                    VerticalAlignment="Center"
                                    FontWeight="Bold"
                                    FontSize="17"
@@ -35,7 +35,9 @@
         <Setter Property="Margin" Value="2" />
         <Setter Property="Template">
             <ControlTemplate>
+                <!-- Tooltip doesnt work -->
                 <Border x:Name="PART_Border"
+                        ToolTip.Tip="{TemplateBinding Label}"
                         Margin="{TemplateBinding Margin}"
                         CornerRadius="90"
                         BorderBrush="{TemplateBinding BorderBrush}"
@@ -43,7 +45,7 @@
                         Background="{TemplateBinding Background}"
                         Padding="10">
                     <Image Source="{TemplateBinding Icon}"
-                           Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                           Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Border>
             </ControlTemplate>
         </Setter>

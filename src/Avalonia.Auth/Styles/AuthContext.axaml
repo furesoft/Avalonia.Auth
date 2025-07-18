@@ -67,7 +67,7 @@
                                     <controls:AuthProviderButton
                                         Margin="0,0,0,5"
                                         Provider="{Binding}"
-                                        Title="{Binding Name}"
+                                        Label="{Binding Name}"
                                         Background="{Binding Background}"
                                         Foreground="{Binding Foreground}"
                                         Icon="{Binding Icon}"

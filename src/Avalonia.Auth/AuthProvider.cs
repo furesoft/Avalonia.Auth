@@ -6,7 +6,7 @@ namespace Avalonia.Auth;
 
 public abstract class AuthProvider
 {
-    public virtual string Name { get; }
+    public virtual string Label { get; }
     public virtual Color Background { get; } = Colors.Gray;
     public virtual Color Foreground { get; } = Colors.White;
     public virtual IImage? Icon { get; } = null;

@@ -13,8 +13,8 @@ internal class AuthProviderButton : Button
     public static readonly StyledProperty<IImage> IconProperty =
         AvaloniaProperty.Register<AuthProviderButton, IImage>(nameof(Icon));
 
-    public static readonly StyledProperty<string> TitleProperty =
-        AvaloniaProperty.Register<AuthProviderButton, string>(nameof(Title));
+    public static readonly StyledProperty<string> LabelProperty =
+        AvaloniaProperty.Register<AuthProviderButton, string>(nameof(Label));
 
     public static readonly StyledProperty<AuthProvider> ProviderProperty =
         AvaloniaProperty.Register<AuthProviderButton, AuthProvider>(nameof(Provider));
@@ -25,10 +25,10 @@ internal class AuthProviderButton : Button
         set => SetValue(IconProperty, value);
     }
 
-    public string Title
+    public string Label
     {
-        get => GetValue(TitleProperty);
-        set => SetValue(TitleProperty, value);
+        get => GetValue(LabelProperty);
+        set => SetValue(LabelProperty, value);
     }
 
     public AuthProvider Provider

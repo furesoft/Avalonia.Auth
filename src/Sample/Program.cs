@@ -26,13 +26,14 @@ class Program
             })
             .UseAuthProvider<GoogleProvider>()
             .UseAuthProvider<GithubProvider>()
+            .UseAuthProvider<HelloProvider>()
             .WithInterFont()
             .LogToTrace();
 }
 
 internal class GoogleProvider : AuthProvider
 {
-    public override string Name => "Google";
+    public override string Label => "Login with Google";
     public override Color Background => Color.Parse("#ffffff");
     public override Color Foreground => Color.Parse("#3c4043");
 
@@ -46,10 +47,22 @@ internal class GoogleProvider : AuthProvider
 
 internal class GithubProvider : AuthProvider
 {
-    public override string Name => "Github";
+    public override string Label => "Login with Github";
+    public override Color Background => Color.Parse("#ffffff");
+    public override Color Foreground => Color.Parse("#000000");
+    public override IImage? Icon { get; } = GetIcon("avares://Sample/Assets/github.png");
+    public override void Authenticate()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+internal class HelloProvider : AuthProvider
+{
+    public override string Label => "Continue with Hellō";
     public override Color Background => Color.Parse("#24292e");
     public override Color Foreground => Color.Parse("#ffffff");
-    public override IImage? Icon { get; } = GetIcon("avares://Sample/Assets/github.png");
+    public override IImage? Icon { get; } = GetIcon("avares://Sample/Assets/hello.png");
     public override void Authenticate()
     {
         throw new NotImplementedException();
