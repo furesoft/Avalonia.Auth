@@ -1,6 +1,11 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
+        xmlns:converters="clr-namespace:Avalonia.Markup.Xaml.Converters;assembly=Avalonia.Markup.Xaml">
+
+    <Styles.Resources>
+        <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+    </Styles.Resources>
 
     <Style Selector="controls|AuthProviderButton">
         <Setter Property="BorderBrush" Value="#B0C4DE"></Setter>
@@ -13,7 +18,7 @@
                         CornerRadius="10"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
-                        Background="{TemplateBinding Background}"
+                        Background="{TemplateBinding Background, Converter={StaticResource ColorToBrushConverter}}"
                         Padding="14,8">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
                         <Image Source="{TemplateBinding Icon}"
@@ -22,8 +27,24 @@
                                    VerticalAlignment="Center"
                                    FontWeight="Bold"
                                    FontSize="17"
-                                   Foreground="{TemplateBinding Foreground}" />
+                                   Foreground="{TemplateBinding Foreground, Converter={StaticResource ColorToBrushConverter}}" />
                     </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|AuthProviderButton:minimal">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1.5"
+                        Background="{TemplateBinding Background}"
+                        Padding="10">
+                    <Image Source="{TemplateBinding Icon}"
+                           Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
             </ControlTemplate>
         </Setter>

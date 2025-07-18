@@ -6,4 +6,5 @@ public class AuthOptions
     public bool EnableUsernamePassword { get; set; } = true;
     public bool ShowForgotPasswordLink { get; set; } = true;
     public bool ShowRegisterLink { get; set; } = true;
+    public bool MinimalMode { get; set; } = false;
 }

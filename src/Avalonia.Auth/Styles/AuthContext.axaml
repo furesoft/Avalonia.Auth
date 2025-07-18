@@ -4,6 +4,11 @@
 
     <Style Selector="controls|AuthContext">
         <Setter Property="Background" Value="#e2e2e2" />
+        <Setter Property="ItemsPanel">
+            <ItemsPanelTemplate>
+                <StackPanel Spacing="5" />
+            </ItemsPanelTemplate>
+        </Setter>
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
@@ -18,7 +23,7 @@
                                FontWeight="Bold"
                                Foreground="#222"
                                HorizontalAlignment="Center"
-                               Margin="0,0,0,10"/>
+                               Margin="0,0,0,10" />
 
                         <StackPanel x:Name="PART_UsernamePasswordPanel"
                                     HorizontalAlignment="Center"
@@ -32,8 +37,8 @@
                                      Watermark="Password"
                                      Margin="0,0,0,10"
                                      Width="220"
-                                     PasswordChar="*"/>
-                            <controls:Link Title="Password forgotten?"
+                                     PasswordChar="*" />
+                            <controls:Link Title="Forgot password?"
                                            IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />
                             <controls:Link Title="Register"
                                            IsVisible="{Binding Options.ShowRegisterLink, RelativeSource={RelativeSource TemplatedParent}}" />
@@ -49,27 +54,23 @@
                                     FontSize="16"
                                     BorderThickness="0"
                                     CornerRadius="6"
-                                    Padding="10,6"
-                                    Effect="{DynamicResource MaterialShadowDepth2}"/>
+                                    Padding="10,6" />
                         </StackPanel>
 
-                        <ItemsControl ItemsSource="{TemplateBinding Providers}">
+                        <ItemsControl
+                            ItemsSource="{TemplateBinding Providers}" HorizontalAlignment="Center"
+                            ItemsPanel="{TemplateBinding ItemsPanel}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <controls:AuthProviderButton
                                         Provider="{Binding}"
                                         Title="{Binding Name}"
-                                        Icon="{Binding Icon}"
                                         Background="{Binding Background}"
-                                        Foreground="{Binding Foreground}" />
+                                        Foreground="{Binding Foreground}"
+                                        Icon="{Binding Icon}"
+                                        Classes.Minimal="{Binding Options.MinimalMode, RelativeSource={RelativeSource TemplatedParent}}" />
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
-
-                            <ItemsControl.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <StackPanel Spacing="5" />
-                                </ItemsPanelTemplate>
-                            </ItemsControl.ItemsPanel>
                         </ItemsControl>
                     </StackPanel>
                 </Border>
@@ -79,7 +80,15 @@
 
     <Style Selector="Button[IsPointerOver=True]">
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="Background" Value="#0078D7"></Setter>
+        <Setter Property="Background" Value="#0078D7" />
+    </Style>
+
+    <Style Selector="controls|AuthContext[MinimalMode=True]">
+        <Setter Property="ItemsPanel">
+            <ItemsPanelTemplate>
+                <WrapPanel />
+            </ItemsPanelTemplate>
+        </Setter>
     </Style>
 
 </Styles>
