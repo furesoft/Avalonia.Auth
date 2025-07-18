@@ -5,7 +5,7 @@ using Avalonia.Media;
 
 namespace Avalonia.Auth.Controls;
 
-public class AuthProviderButton : Button
+internal class AuthProviderButton : Button
 {
     public static readonly StyledProperty<IImage> IconProperty =
         AvaloniaProperty.Register<AuthProviderButton, IImage>(nameof(Icon));

@@ -4,7 +4,7 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 ## Features
 
-- **AuthProviderButton**: Beautiful, customizable button for various authentication providers
+- **AuthContext**: Modern, customizable authentication context for various providers
 - **Provider-specific colors & icons**
 - **Easy integration into Avalonia projects**
 - **Extensible for additional OAuth providers**
@@ -12,18 +12,10 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 ## Example
 
 ```xml
-<controls:AuthProviderButton
-    Title="Sign in with Google"
-    Icon="avares://Sample/Assets/google.png"
-    ProviderName="Google"
-    Background="#fbbc05" />
-
-<controls:AuthProviderButton
-    Title="Sign in with Github"
-    Icon="avares://Sample/Assets/github.png"
-    ProviderName="Github"
-    Background="#24292e" />
+<controls:AuthContext />
 ```
+
+All available providers registered in the Splat IoC container and implementing `AuthProvider` will be shown automatically.
 
 ## Installation
 
@@ -36,7 +28,7 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 ## Extending
 
-You can add your own providers by implementing `IAuthProvider` and customizing the button as needed.
+You can add your own providers by implementing `AuthProvider` and registering them in the Splat IoC container.
 
 ## Sample
 
@@ -44,7 +36,7 @@ A sample application is included in the `Sample` folder to demonstrate usage.
 
 ## License
 
-GPL-3 License
+MIT License
 
 ---
 
