@@ -17,7 +17,8 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
                         Background="{TemplateBinding Background}"
-                        Padding="14,8">
+                        Padding="14,8"
+                        BoxShadow="5 5 10 5 DarkGray">
                     <StackPanel Spacing="5">
                         <Label Content="{Binding Options.Title, RelativeSource={RelativeSource TemplatedParent}}"
                                FontSize="20"
