@@ -22,6 +22,7 @@ class Program
             {
                 _.Title = "Login";
                 _.ShowRegisterLink = false;
+                _.MinimalMode = true;
             })
             .UseAuthProvider<GoogleProvider>()
             .UseAuthProvider<GithubProvider>()

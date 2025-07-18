@@ -63,6 +63,7 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <controls:AuthProviderButton
+                                        Margin="0,0,0,5"
                                         Provider="{Binding}"
                                         Title="{Binding Name}"
                                         Background="{Binding Background}"
