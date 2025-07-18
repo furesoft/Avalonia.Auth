@@ -3,7 +3,7 @@
         xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
 
     <Style Selector="controls|AuthContext">
-        <Setter Property="Background" Value="#e2e2e2"></Setter>
+        <Setter Property="Background" Value="#e2e2e2" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
@@ -12,24 +12,32 @@
                         BorderThickness="1.5"
                         Background="{TemplateBinding Background}"
                         Padding="14,8">
-                    <ItemsControl ItemsSource="{TemplateBinding Providers}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <controls:AuthProviderButton
-                                    Provider="{Binding}"
-                                    Title="{Binding Name}"
-                                    Background="{Binding Provider.Background}"
-                                    Foreground="{Binding Provider.Foreground}"
-                                    />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
+                    <StackPanel Spacing="5">
+                        <Label Content="{Binding Options.Title, RelativeSource={RelativeSource TemplatedParent}}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="#222"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
 
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Spacing="5" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
+                        <ItemsControl ItemsSource="{TemplateBinding Providers}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <controls:AuthProviderButton
+                                        Provider="{Binding}"
+                                        Title="{Binding Name}"
+                                        Background="{Binding Provider.Background}"
+                                        Foreground="{Binding Provider.Foreground}" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Spacing="5" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
                 </Border>
             </ControlTemplate>
         </Setter>

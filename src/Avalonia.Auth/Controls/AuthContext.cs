@@ -9,6 +9,15 @@ public class AuthContext : TemplatedControl
     public static readonly StyledProperty<ObservableCollection<AuthProvider>> ProvidersProperty =
         AvaloniaProperty.Register<AuthProviderButton, ObservableCollection<AuthProvider>>(nameof(Providers));
 
+    public static readonly StyledProperty<AuthOptions> OptionsProperty =
+        AvaloniaProperty.Register<AuthContext, AuthOptions>(nameof(AuthOptions));
+
+    public AuthOptions Options
+    {
+        get => GetValue(OptionsProperty);
+        set => SetValue(OptionsProperty, value);
+    }
+
     public ObservableCollection<AuthProvider> Providers
     {
         get => GetValue(ProvidersProperty);
@@ -19,6 +28,8 @@ public class AuthContext : TemplatedControl
     {
         var providers = Locator.Current.GetServices<AuthProvider>();
         Providers = new ObservableCollection<AuthProvider>(providers);
+
+        Options = Locator.Current.GetService<AuthOptions>()!;
     }
 
 }
