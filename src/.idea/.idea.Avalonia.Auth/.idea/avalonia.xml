@@ -6,6 +6,7 @@
         <entry key="Avalonia.Auth/Controls/AuthProviderButton.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Default.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Styles/AuthContext.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/Link.axaml" value="Sample/Sample.csproj" />
         <entry key="Sample/App.axaml" value="Sample/Sample.csproj" />
         <entry key="Sample/MainWindow.axaml" value="Sample/Sample.csproj" />
       </map>

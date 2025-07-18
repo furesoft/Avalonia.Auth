@@ -20,6 +20,26 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"/>
 
+                        <TextBox x:Name="PART_EmailBox"
+                                 Watermark="Username"
+                                 Margin="0,0,0,5"
+                                 Width="220"
+                                 HorizontalAlignment="Center"/>
+                        <TextBox x:Name="PART_PasswordBox"
+                                 Watermark="Password"
+                                 Margin="0,0,0,10"
+                                 Width="220"
+                                 HorizontalAlignment="Center"
+                                 PasswordChar="*"/>
+                        <controls:Link Title="Password forgotten?" />
+                        <controls:Link Title="Register" />
+
+                        <Button x:Name="PART_LoginButton"
+                                Content="Login"
+                                Width="220"
+                                HorizontalAlignment="Center"
+                                Margin="0,0,0,10"/>
+
                         <ItemsControl ItemsSource="{TemplateBinding Providers}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>

@@ -29,3 +29,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/chris/RiderProjects/Avalonia.Auth/src/Avalonia.Auth/Styles/AuthProviderButton.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/chris/RiderProjects/Avalonia.Auth/src/Avalonia.Auth/Styles/Link.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
