@@ -41,11 +41,8 @@ internal class AuthProviderButton : Button
 
     private void OnProviderChanged()
     {
-        if (Provider != null)
-        {
-            Background = new SolidColorBrush(Provider.Background);
-            Foreground = new SolidColorBrush(Provider.Foreground);
-        }
+        Background = new SolidColorBrush(Provider.Background);
+        Foreground = new SolidColorBrush(Provider.Foreground);
     }
 
     private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
