@@ -1,15 +1,11 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
-        xmlns:converters="clr-namespace:Avalonia.Markup.Xaml.Converters;assembly=Avalonia.Markup.Xaml">
-
-    <Styles.Resources>
-        <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
-    </Styles.Resources>
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
 
     <Style Selector="controls|AuthProviderButton">
         <Setter Property="BorderBrush" Value="#B0C4DE"></Setter>
         <Setter Property="Background" Value="White"></Setter>
+        <Setter Property="CornerRadius" Value="10"></Setter>
         <Setter Property="Foreground" Value="Black"></Setter>
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
@@ -19,7 +15,7 @@
                         CornerRadius="10"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
-                        Background="{TemplateBinding Background, Converter={StaticResource ColorToBrushConverter}}"
+                        Background="{TemplateBinding Background}"
                         Padding="14,8">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
                         <Image Source="{TemplateBinding Icon}"
@@ -28,18 +24,18 @@
                                    VerticalAlignment="Center"
                                    FontWeight="Bold"
                                    FontSize="17"
-                                   Foreground="{TemplateBinding Foreground, Converter={StaticResource ColorToBrushConverter}}" />
+                                   Foreground="{TemplateBinding Foreground}" />
                     </StackPanel>
                 </Border>
             </ControlTemplate>
         </Setter>
     </Style>
 
-    <Style Selector="controls|AuthProviderButton:minimal">
+    <Style Selector="controls|AuthProviderButton[IconOnly=True]">
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
-                        CornerRadius="10"
+                        CornerRadius="90"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
                         Background="{TemplateBinding Background}"

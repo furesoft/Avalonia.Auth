@@ -8,6 +8,8 @@ namespace Avalonia.Auth.Controls;
 
 internal class AuthProviderButton : Button
 {
+    public static readonly StyledProperty<bool> IconOnlyProperty = AvaloniaProperty.Register<AuthProviderButton, bool>(nameof(IconOnly));
+
     public static readonly StyledProperty<IImage> IconProperty =
         AvaloniaProperty.Register<AuthProviderButton, IImage>(nameof(Icon));
 
@@ -33,6 +35,12 @@ internal class AuthProviderButton : Button
     {
         get => GetValue(ProviderProperty);
         set => SetValue(ProviderProperty, value);
+    }
+
+    public bool IconOnly
+    {
+        get { return GetValue(IconOnlyProperty); }
+        set { SetValue(IconOnlyProperty, value); }
     }
 
     static AuthProviderButton()

@@ -69,7 +69,7 @@
                                         Background="{Binding Background}"
                                         Foreground="{Binding Foreground}"
                                         Icon="{Binding Icon}"
-                                        Classes.Minimal="{Binding Options.MinimalMode, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        IconOnly="{Binding $parent[controls:AuthContext].MinimalMode}" />
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
