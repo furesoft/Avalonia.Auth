@@ -20,7 +20,6 @@ class Program
             .UsePlatformDetect()
             .ConfigureAuth(_ =>
             {
-                _.Title = "Login";
                 _.ShowRegisterLink = false;
                 _.MinimalMode = true;
                 _.UseAuthProvider<GoogleProvider>();

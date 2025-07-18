@@ -34,11 +34,14 @@
                             <TextBox x:Name="PART_UsernameBox"
                                      Watermark="Username"
                                      Margin="0,0,0,5"
-                                     Width="220" />
+                                     UseFloatingWatermark="True"
+                                     Height="50"
+                                     />
                             <TextBox x:Name="PART_PasswordBox"
                                      Watermark="Password"
                                      Margin="0,0,0,10"
-                                     Width="220"
+                                     UseFloatingWatermark="True"
+                                     Height="50"
                                      PasswordChar="*" />
                             <controls:Link Title="Forgot password?" Command="{TemplateBinding ForgotPasswordCommand}"
                                            IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />

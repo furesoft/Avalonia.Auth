@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml.Templates;
 using Splat;
@@ -85,6 +86,12 @@ public class AuthContext : TemplatedControl
         foreach (var authProvider in Providers)
         {
             authProvider.Context = this;
+        }
+
+        if (Options?.EnableUsernamePassword == true)
+        {
+            var usernameBox = e.NameScope.Find<TextBox>("PART_UsernameBox");
+            usernameBox?.Focus();
         }
     }
 }

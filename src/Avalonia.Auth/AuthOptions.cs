@@ -6,7 +6,7 @@ public class AuthOptions
 {
     internal readonly List<AuthProvider> Providers = [];
 
-    public string Title { get; set; } = "Login";
+    public string? Title { get; set; }
     public bool EnableUsernamePassword { get; set; } = true;
     public bool ShowForgotPasswordLink { get; set; } = true;
     public bool ShowRegisterLink { get; set; } = true;

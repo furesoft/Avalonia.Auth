@@ -51,4 +51,9 @@
         </Setter>
     </Style>
 
+    <Style Selector="controls|AuthProviderButton:pointerover">
+        <Setter Property="Opacity" Value="0.8" />
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+    </Style>
+
 </Styles>
