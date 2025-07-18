@@ -54,6 +54,8 @@ internal class AuthProviderButton : Button
         Foreground = new SolidColorBrush(Provider.Foreground);
         if (Provider.Icon is not null)
             Icon = Provider.Icon;
+
+        Label = Provider.Label;
     }
 
     private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)

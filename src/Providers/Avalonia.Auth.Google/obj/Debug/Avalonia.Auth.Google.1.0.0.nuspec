@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>Avalonia.Auth.Google</authors>
     <description>Package Description</description>
-    <repository type="git" url="https://github.com/furesoft/Avalonia.Auth" commit="8ec0321de2185af07ec7754f983cc8b7e3da4388" />
+    <repository type="git" url="https://github.com/furesoft/Avalonia.Auth" commit="5b7ea6d88b7ec033197865c6af868a89fc62bfdb" />
     <dependencies>
       <group targetFramework="net9.0">
         <dependency id="Avalonia.Auth" version="1.0.0" exclude="Build,Analyzers" />

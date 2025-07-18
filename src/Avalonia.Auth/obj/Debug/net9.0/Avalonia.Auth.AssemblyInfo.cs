@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Avalonia.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ec0321de2185af07ec7754f983cc8b7e3da4388")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b7ea6d88b7ec033197865c6af868a89fc62bfdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Avalonia.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Avalonia.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
