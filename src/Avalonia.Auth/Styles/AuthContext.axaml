@@ -26,8 +26,8 @@
                                     <controls:AuthProviderButton
                                         Provider="{Binding}"
                                         Title="{Binding Name}"
-                                        Background="{Binding Provider.Background}"
-                                        Foreground="{Binding Provider.Foreground}" />
+                                        Background="{Binding Background}"
+                                        Foreground="{Binding Foreground}" />
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
 

@@ -34,6 +34,20 @@ internal class AuthProviderButton : Button
         set => SetValue(ProviderProperty, value);
     }
 
+    static AuthProviderButton()
+    {
+        ProviderProperty.Changed.AddClassHandler<AuthProviderButton>((b, e) => b.OnProviderChanged());
+    }
+
+    private void OnProviderChanged()
+    {
+        if (Provider != null)
+        {
+            Background = new SolidColorBrush(Provider.Background);
+            Foreground = new SolidColorBrush(Provider.Foreground);
+        }
+    }
+
     private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
     {
         Provider.Authenticate();
