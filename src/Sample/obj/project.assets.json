@@ -622,6 +622,45 @@
         "runtime": {
           "bin/placeholder/Avalonia.Auth.dll": {}
         }
+      },
+      "Avalonia.Auth.Github/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Avalonia.Auth.Github.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Avalonia.Auth.Github.dll": {}
+        }
+      },
+      "Avalonia.Auth.Google/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Avalonia.Auth.Google.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Avalonia.Auth.Google.dll": {}
+        }
+      },
+      "Avalonia.Auth.Hello/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Avalonia.Auth.Hello.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Avalonia.Auth.Hello.dll": {}
+        }
       }
     }
   },
@@ -1570,12 +1609,30 @@
       "type": "project",
       "path": "../Avalonia.Auth/Avalonia.Auth.csproj",
       "msbuildProject": "../Avalonia.Auth/Avalonia.Auth.csproj"
+    },
+    "Avalonia.Auth.Github/1.0.0": {
+      "type": "project",
+      "path": "../Providers/Avalonia.Auth.Github/Avalonia.Auth.Github.csproj",
+      "msbuildProject": "../Providers/Avalonia.Auth.Github/Avalonia.Auth.Github.csproj"
+    },
+    "Avalonia.Auth.Google/1.0.0": {
+      "type": "project",
+      "path": "../Providers/Avalonia.Auth.Google/Avalonia.Auth.Google.csproj",
+      "msbuildProject": "../Providers/Avalonia.Auth.Google/Avalonia.Auth.Google.csproj"
+    },
+    "Avalonia.Auth.Hello/1.0.0": {
+      "type": "project",
+      "path": "../Providers/Avalonia.Auth.Hello/Avalonia.Auth.Hello.csproj",
+      "msbuildProject": "../Providers/Avalonia.Auth.Hello/Avalonia.Auth.Hello.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Avalonia >= 11.1.0",
       "Avalonia.Auth >= 1.0.0",
+      "Avalonia.Auth.Github >= 1.0.0",
+      "Avalonia.Auth.Google >= 1.0.0",
+      "Avalonia.Auth.Hello >= 1.0.0",
       "Avalonia.Desktop >= 11.1.0",
       "Avalonia.Diagnostics >= 11.1.0",
       "Avalonia.Fonts.Inter >= 11.1.0",
@@ -1611,6 +1668,15 @@
           "projectReferences": {
             "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Avalonia.Auth\\Avalonia.Auth.csproj": {
               "projectPath": "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Avalonia.Auth\\Avalonia.Auth.csproj"
+            },
+            "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Github\\Avalonia.Auth.Github.csproj": {
+              "projectPath": "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Github\\Avalonia.Auth.Github.csproj"
+            },
+            "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Google\\Avalonia.Auth.Google.csproj": {
+              "projectPath": "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Google\\Avalonia.Auth.Google.csproj"
+            },
+            "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Hello\\Avalonia.Auth.Hello.csproj": {
+              "projectPath": "C:\\Users\\chris\\RiderProjects\\Avalonia.Auth\\src\\Providers\\Avalonia.Auth.Hello\\Avalonia.Auth.Hello.csproj"
             }
           }
         }

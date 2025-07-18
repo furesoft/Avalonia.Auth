@@ -5,7 +5,7 @@ namespace Avalonia.Auth;
 public static class LoginAppBuilderExtensions
 {
 
-    public static AppBuilder ConfigureAuth(this AppBuilder builder, Action<AuthOptions> configureOptions)
+    public static AppBuilder WithAuth(this AppBuilder builder, Action<AuthOptions> configureOptions)
     {
         builder.AfterSetup(_ =>
         {

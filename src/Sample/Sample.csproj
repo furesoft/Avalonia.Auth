@@ -28,10 +28,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Avalonia.Auth\Avalonia.Auth.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <AvaloniaResource Include="Assets\github.png" />
-      <AvaloniaResource Include="Assets\google.png" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj" />
     </ItemGroup>
 </Project>

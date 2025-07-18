@@ -11,11 +11,28 @@ public abstract class AuthProvider
     public virtual Color Background { get; } = Colors.Gray;
     public virtual Color Foreground { get; } = Colors.White;
     public virtual IImage? Icon { get; } = null;
-    public AuthContext Context { get; internal set; }
+    public AuthContext Context { get; internal set; } = null!;
     public virtual void Authenticate() {}
 
+    /// <summary>
+    /// Loads an icon from the specified URI.
+    /// </summary>
+    /// <param name="uri"></param>
+    /// <returns></returns>
     protected static IImage? GetIcon(string uri)
     {
-        return new Bitmap(AssetLoader.Open(new Uri(uri)));
+        try
+        {
+            return new Bitmap(AssetLoader.Open(new Uri(uri)));
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    protected TOptions? GetOptions<TOptions>() where TOptions : class
+    {
+        return (TOptions?)Splat.Locator.Current.GetService(typeof(TOptions));
     }
 }

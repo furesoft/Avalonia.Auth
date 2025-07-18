@@ -69,3 +69,9 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.genruntimeconfig.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\ref\Sample.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\CommunityToolkit.Mvvm.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Github.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Google.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Hello.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Github.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Google.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Hello.pdb

@@ -10,6 +10,9 @@
         "dependencies": {
           "Avalonia": "11.1.0",
           "Avalonia.Auth": "1.0.0",
+          "Avalonia.Auth.Github": "1.0.0",
+          "Avalonia.Auth.Google": "1.0.0",
+          "Avalonia.Auth.Hello": "1.0.0",
           "Avalonia.Desktop": "11.1.0",
           "Avalonia.Diagnostics": "11.1.0",
           "Avalonia.Fonts.Inter": "11.1.0",
@@ -444,6 +447,39 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Avalonia.Auth.Github/1.0.0": {
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "runtime": {
+          "Avalonia.Auth.Github.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Avalonia.Auth.Google/1.0.0": {
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "runtime": {
+          "Avalonia.Auth.Google.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Avalonia.Auth.Hello/1.0.0": {
+        "dependencies": {
+          "Avalonia.Auth": "1.0.0"
+        },
+        "runtime": {
+          "Avalonia.Auth.Hello.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -678,6 +714,21 @@
       "hashPath": "tmds.dbus.protocol.0.16.0.nupkg.sha512"
     },
     "Avalonia.Auth/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Avalonia.Auth.Github/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Avalonia.Auth.Google/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Avalonia.Auth.Hello/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

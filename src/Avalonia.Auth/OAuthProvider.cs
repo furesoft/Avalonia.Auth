@@ -1,25 +1,20 @@
 ﻿namespace Avalonia.Auth;
 
-public class OAuthProvider(
-    string name,
+public class OAuthProvider()
+    : AuthProvider
+{
+
+}
+public class OAuthOptions(
     string clientId,
     string clientSecret,
     string authorizationEndpoint,
     string tokenEndpoint,
     string redirectUri)
-    : AuthProvider
 {
-    public virtual string Name { get; } = name;
-    protected readonly string ClientId = clientId;
-    protected readonly string ClientSecret = clientSecret;
-    protected readonly string AuthorizationEndpoint = authorizationEndpoint;
-    protected readonly string TokenEndpoint = tokenEndpoint;
-    protected readonly string RedirectUri = redirectUri;
-
-    public virtual void Authenticate()
-    {
-        // Generischer OAuth2-Flow (z.B. Öffnen des Browsers mit Auth-URL)
-        // Diese Methode kann in abgeleiteten Klassen überschrieben werden
-        throw new NotImplementedException("OAuth2-Authentifizierung muss implementiert werden.");
-    }
+    public string? ClientId { get; set; } = clientId;
+    public string? ClientSecret { get; set; } = clientSecret;
+    public string? AuthorizationEndpoint { get; set; } = authorizationEndpoint;
+    public string? TokenEndpoint { get; set; } = tokenEndpoint;
+    public string? RedirectUri { get; set; } = redirectUri;
 }

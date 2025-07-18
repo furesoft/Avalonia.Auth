@@ -7,6 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth", "Avalonia.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{DE4CF7C1-7B91-4B3B-81C2-B4AF4A62B6BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Google", "Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj", "{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{5432FED4-2A2C-4E12-B413-56869F59B9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Github", "Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj", "{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Hello", "Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj", "{05FBA132-C798-49A6-9247-331797676A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{B730CA00-A750-438A-8D2B-15F6FFE2A893}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +37,22 @@ Global
 		{DE4CF7C1-7B91-4B3B-81C2-B4AF4A62B6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE4CF7C1-7B91-4B3B-81C2-B4AF4A62B6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE4CF7C1-7B91-4B3B-81C2-B4AF4A62B6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FBA132-C798-49A6-9247-331797676A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FBA132-C798-49A6-9247-331797676A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FBA132-C798-49A6-9247-331797676A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FBA132-C798-49A6-9247-331797676A12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
+		{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
+		{05FBA132-C798-49A6-9247-331797676A12} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 	EndGlobalSection
 EndGlobal

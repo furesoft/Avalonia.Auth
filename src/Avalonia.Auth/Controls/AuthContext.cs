@@ -88,7 +88,7 @@ public class AuthContext : TemplatedControl
             authProvider.Context = this;
         }
 
-        if (Options?.EnableUsernamePassword == true)
+        if (Options.EnableUsernamePassword == true)
         {
             var usernameBox = e.NameScope.Find<TextBox>("PART_UsernameBox");
             usernameBox?.Focus();

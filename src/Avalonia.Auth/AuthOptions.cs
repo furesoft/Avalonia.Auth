@@ -12,7 +12,7 @@ public class AuthOptions
     public bool ShowRegisterLink { get; set; } = true;
     public bool MinimalMode { get; set; }
 
-    public AuthOptions UseAuthProvider<TProvider, TOptions>(
+    public AuthOptions AddProvider<TProvider, TOptions>(
         Action<TOptions> configureOptions)
         where TProvider : AuthProvider, new()
         where TOptions : class, new()
@@ -29,7 +29,7 @@ public class AuthOptions
         return this;
     }
 
-    public AuthOptions UseAuthProvider<TProvider>()
+    public AuthOptions AddProvider<TProvider>()
         where TProvider : AuthProvider, new()
     {
         Providers.Add(new TProvider());
