@@ -21,6 +21,7 @@ class Program
             .ConfigureAuth(_ =>
             {
                 _.Title = "Login";
+                _.ShowRegisterLink = false;
             })
             .UseAuthProvider<GoogleProvider>()
             .UseAuthProvider<GithubProvider>()

@@ -20,25 +20,38 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"/>
 
-                        <TextBox x:Name="PART_EmailBox"
-                                 Watermark="Username"
-                                 Margin="0,0,0,5"
-                                 Width="220"
-                                 HorizontalAlignment="Center"/>
-                        <TextBox x:Name="PART_PasswordBox"
-                                 Watermark="Password"
-                                 Margin="0,0,0,10"
-                                 Width="220"
-                                 HorizontalAlignment="Center"
-                                 PasswordChar="*"/>
-                        <controls:Link Title="Password forgotten?" />
-                        <controls:Link Title="Register" />
+                        <StackPanel x:Name="PART_UsernamePasswordPanel"
+                                    HorizontalAlignment="Center"
+                                    IsVisible="{Binding Options.EnableUsernamePassword, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Spacing="5">
+                            <TextBox x:Name="PART_UsernameBox"
+                                     Watermark="Username"
+                                     Margin="0,0,0,5"
+                                     Width="220" />
+                            <TextBox x:Name="PART_PasswordBox"
+                                     Watermark="Password"
+                                     Margin="0,0,0,10"
+                                     Width="220"
+                                     PasswordChar="*"/>
+                            <controls:Link Title="Password forgotten?"
+                                           IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <controls:Link Title="Register"
+                                           IsVisible="{Binding Options.ShowRegisterLink, RelativeSource={RelativeSource TemplatedParent}}" />
 
-                        <Button x:Name="PART_LoginButton"
-                                Content="Login"
-                                Width="220"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,10"/>
+                            <Button x:Name="PART_LoginButton"
+                                    Content="Login"
+                                    Width="220"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,0,0,10"
+                                    Background="#0078D7"
+                                    Foreground="White"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                    BorderThickness="0"
+                                    CornerRadius="6"
+                                    Padding="10,6"
+                                    Effect="{DynamicResource MaterialShadowDepth2}"/>
+                        </StackPanel>
 
                         <ItemsControl ItemsSource="{TemplateBinding Providers}">
                             <ItemsControl.ItemTemplate>
@@ -61,6 +74,11 @@
                 </Border>
             </ControlTemplate>
         </Setter>
+    </Style>
+
+    <Style Selector="Button[IsPointerOver=True]">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Background" Value="#0078D7"></Setter>
     </Style>
 
 </Styles>
