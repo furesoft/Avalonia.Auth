@@ -40,9 +40,9 @@
                                      Margin="0,0,0,10"
                                      Width="220"
                                      PasswordChar="*" />
-                            <controls:Link Title="Forgot password?"
+                            <controls:Link Title="Forgot password?" Command="{TemplateBinding ForgotPasswordCommand}"
                                            IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />
-                            <controls:Link Title="Register"
+                            <controls:Link Title="Register" Command="{TemplateBinding RegisterCommand}"
                                            IsVisible="{Binding Options.ShowRegisterLink, RelativeSource={RelativeSource TemplatedParent}}" />
 
                             <Button x:Name="PART_LoginButton"

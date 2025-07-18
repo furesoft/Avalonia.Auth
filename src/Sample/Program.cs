@@ -41,7 +41,7 @@ internal class GoogleProvider : AuthProvider
 
     public override void Authenticate()
     {
-        throw new NotImplementedException();
+        Context.AuthenticatedCommand.Execute(null);
     }
 }
 
@@ -53,7 +53,7 @@ internal class GithubProvider : AuthProvider
     public override IImage? Icon { get; } = GetIcon("avares://Sample/Assets/github.png");
     public override void Authenticate()
     {
-        throw new NotImplementedException();
+        Context.AuthenticatedCommand.Execute(null);
     }
 }
 
@@ -65,6 +65,6 @@ internal class HelloProvider : AuthProvider
     public override IImage? Icon { get; } = GetIcon("avares://Sample/Assets/hello.png");
     public override void Authenticate()
     {
-        throw new NotImplementedException();
+        Context.AuthenticatedCommand.Execute(null);
     }
 }

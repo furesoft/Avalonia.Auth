@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml.Templates;
 using Splat;
@@ -18,6 +19,33 @@ public class AuthContext : TemplatedControl
 
     public static readonly StyledProperty<bool> MinimalModeProperty =
         AvaloniaProperty.Register<AuthContext, bool>(nameof(MinimalMode));
+
+    public static readonly StyledProperty<ICommand> RegisterCommandProperty =
+        AvaloniaProperty.Register<AuthContext, ICommand>(nameof(RegisterCommand));
+
+    public static readonly StyledProperty<ICommand> ForgotPasswordCommandProperty =
+        AvaloniaProperty.Register<AuthContext, ICommand>(nameof(ForgotPasswordCommand));
+
+    public static readonly StyledProperty<ICommand> AuthenticatedCommandProperty =
+        AvaloniaProperty.Register<AuthContext, ICommand>(nameof(AuthenticatedCommand));
+
+    public ICommand AuthenticatedCommand
+    {
+        get => GetValue(AuthenticatedCommandProperty);
+        set => SetValue(AuthenticatedCommandProperty, value);
+    }
+
+    public ICommand ForgotPasswordCommand
+    {
+        get => GetValue(ForgotPasswordCommandProperty);
+        set => SetValue(ForgotPasswordCommandProperty, value);
+    }
+
+    public ICommand RegisterCommand
+    {
+        get => GetValue(RegisterCommandProperty);
+        set => SetValue(RegisterCommandProperty, value);
+    }
 
     public bool MinimalMode
     {
@@ -48,5 +76,15 @@ public class AuthContext : TemplatedControl
     {
         get => GetValue(ProvidersProperty);
         set => SetValue(ProvidersProperty, value);
+    }
+
+    protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+    {
+        base.OnApplyTemplate(e);
+
+        foreach (var authProvider in Providers)
+        {
+            authProvider.Context = this;
+        }
     }
 }
