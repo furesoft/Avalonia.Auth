@@ -59,6 +59,7 @@
                                     <controls:AuthProviderButton
                                         Provider="{Binding}"
                                         Title="{Binding Name}"
+                                        Icon="{Binding Icon}"
                                         Background="{Binding Background}"
                                         Foreground="{Binding Foreground}" />
                                 </DataTemplate>

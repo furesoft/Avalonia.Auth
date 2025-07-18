@@ -2,6 +2,7 @@
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Media;
+using Avalonia.Media.Imaging;
 
 namespace Avalonia.Auth.Controls;
 
@@ -43,6 +44,8 @@ internal class AuthProviderButton : Button
     {
         Background = new SolidColorBrush(Provider.Background);
         Foreground = new SolidColorBrush(Provider.Foreground);
+        if (Provider.Icon is not null)
+            Icon = Provider.Icon;
     }
 
     private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
