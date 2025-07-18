@@ -1,7 +1,11 @@
-﻿namespace Avalonia.Auth;
+﻿using Avalonia.Media;
 
-public interface IAuthProvider
+namespace Avalonia.Auth;
+
+public abstract class AuthProvider
 {
-    string Name { get; }
-    void Authenticate();
+    public virtual string Name { get; }
+    public virtual Color Background { get; } = Colors.Gray;
+    public virtual Color Foreground { get; } = Colors.White;
+    public virtual void Authenticate() {}
 }

@@ -7,7 +7,7 @@ public class OAuthProvider(
     string authorizationEndpoint,
     string tokenEndpoint,
     string redirectUri)
-    : IAuthProvider
+    : AuthProvider
 {
     public virtual string Name { get; } = name;
     protected readonly string ClientId = clientId;

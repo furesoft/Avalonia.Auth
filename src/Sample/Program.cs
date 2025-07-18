@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using System;
 using Avalonia.Auth;
+using Avalonia.Media;
 
 namespace Sample;
 
@@ -21,6 +22,30 @@ class Program
             {
                 _.Title = "Login";
             })
+            .UseAuthProvider<GoogleProvider>()
+            .UseAuthProvider<GithubProvider>()
             .WithInterFont()
             .LogToTrace();
+}
+
+internal class GoogleProvider : AuthProvider
+{
+    public override string Name => "Google";
+    public override Color Background => Color.Parse("#ffffff");
+    public override Color Foreground => Color.Parse("#3c4043");
+    public override void Authenticate()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+internal class GithubProvider : AuthProvider
+{
+    public override string Name => "Github";
+    public override Color Background => Color.Parse("#24292e");
+    public override Color Foreground => Color.Parse("#ffffff");
+    public override void Authenticate()
+    {
+        throw new NotImplementedException();
+    }
 }

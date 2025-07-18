@@ -1,34 +1,49 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
+using Avalonia.Input;
 using Avalonia.Media;
 
 namespace Avalonia.Auth.Controls;
 
 public class AuthProviderButton : Button
 {
-    public static readonly StyledProperty<IImage?> IconProperty =
-        AvaloniaProperty.Register<AuthProviderButton, IImage?>(nameof(Icon));
+    public static readonly StyledProperty<IImage> IconProperty =
+        AvaloniaProperty.Register<AuthProviderButton, IImage>(nameof(Icon));
 
-    public static readonly StyledProperty<string?> TitleProperty =
-        AvaloniaProperty.Register<AuthProviderButton, string?>(nameof(Title));
+    public static readonly StyledProperty<string> TitleProperty =
+        AvaloniaProperty.Register<AuthProviderButton, string>(nameof(Title));
 
-    public static readonly StyledProperty<string?> ProviderNameProperty =
-        AvaloniaProperty.Register<AuthProviderButton, string?>(nameof(ProviderName));
+    public static readonly StyledProperty<AuthProvider> ProviderProperty =
+        AvaloniaProperty.Register<AuthProviderButton, AuthProvider>(nameof(Provider));
 
-    public IImage? Icon
+    public IImage Icon
     {
         get => GetValue(IconProperty);
         set => SetValue(IconProperty, value);
     }
 
-    public string? Title
+    public string Title
     {
         get => GetValue(TitleProperty);
         set => SetValue(TitleProperty, value);
     }
 
-    public string? ProviderName
+    public AuthProvider Provider
     {
-        get => GetValue(ProviderNameProperty);
-        set => SetValue(ProviderNameProperty, value);
+        get => GetValue(ProviderProperty);
+        set => SetValue(ProviderProperty, value);
+    }
+
+    private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
+    {
+        Provider.Authenticate();
+    }
+
+    protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+    {
+        base.OnApplyTemplate(e);
+
+        var border = e.NameScope.Find<Border>("PART_Border");
+        border!.PointerPressed += AuthProviderButton_OnPointerPressed;
     }
 }

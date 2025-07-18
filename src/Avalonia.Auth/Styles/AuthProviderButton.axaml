@@ -4,6 +4,9 @@
 
     <Style Selector="controls|AuthProviderButton">
         <Setter Property="BorderBrush" Value="#B0C4DE"></Setter>
+        <Setter Property="Background" Value="White"></Setter>
+        <Setter Property="Foreground" Value="Black"></Setter>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
@@ -19,22 +22,11 @@
                                    VerticalAlignment="Center"
                                    FontWeight="Bold"
                                    FontSize="17"
-                                   Foreground="White" />
+                                   Foreground="{TemplateBinding Foreground}" />
                     </StackPanel>
                 </Border>
             </ControlTemplate>
         </Setter>
-        <Setter Property="Cursor" Value="Hand" />
-    </Style>
-
-    <Style Selector="controls|AuthProviderButton[IsPointerOver=True]">
-        <Setter Property="Background">
-            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
-                <GradientStop Color="#6faaff" Offset="0.0"/>
-                <GradientStop Color="#2e6ad1" Offset="0.5"/>
-            </LinearGradientBrush>
-        </Setter>
-        <Setter Property="BorderBrush" Value="#235390"></Setter>
     </Style>
 
 </Styles>

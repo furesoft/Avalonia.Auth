@@ -7,13 +7,6 @@
         x:Class="Sample.MainWindow"
         Title="Sample">
     <StackPanel Margin="20" Spacing="20">
-        <controls:AuthProviderButton Title="Sign in with Google"
-                                     Icon="avares://Sample/Assets/google.png"
-                                     ProviderName="Google"
-                                     Background="#fbbc05" />
-        <controls:AuthProviderButton Title="Sign in with Github"
-                                     Icon="avares://Sample/Assets/github.png"
-                                     ProviderName="Github"
-                                     Background="#24292e" />
+        <controls:AuthContext />
     </StackPanel>
 </Window>

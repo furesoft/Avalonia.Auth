@@ -1,0 +1,38 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
+
+    <Style Selector="controls|AuthContext">
+        <Setter Property="Background" Value="#e2e2e2"></Setter>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1.5"
+                        Background="{TemplateBinding Background}"
+                        Padding="14,8">
+                    <ItemsControl ItemsSource="{TemplateBinding Providers}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <controls:AuthProviderButton
+                                    Provider="{Binding}"
+                                    Title="{Binding Name}"
+                                    Background="{Binding Provider.Background}"
+                                    Foreground="{Binding Provider.Foreground}"
+                                    />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Spacing="5" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+</Styles>
