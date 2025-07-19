@@ -12,7 +12,11 @@ public abstract class AuthProvider
     public virtual Color Foreground { get; } = Colors.White;
     public virtual IImage? Icon { get; } = null;
     public AuthContext Context { get; internal set; } = null!;
-    public virtual void Authenticate() {}
+
+    public virtual Task<bool> Authenticate()
+    {
+        return Task.FromResult(false);
+    }
 
     /// <summary>
     /// Loads an icon from the specified URI.

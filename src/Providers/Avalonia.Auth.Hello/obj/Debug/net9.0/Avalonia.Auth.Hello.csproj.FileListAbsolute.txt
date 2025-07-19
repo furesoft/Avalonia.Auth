@@ -11,8 +11,8 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.Auth.Hello.AssemblyInfo.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.Auth.Hello.csproj.CoreCompileInputs.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.Auth.Hello.sourcelink.json
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Hello.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Hello.pdb
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\refint\Avalonia\Avalonia.Auth.Hello.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.80F5A4D7.Up2Date
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\ref\Avalonia.Auth.Hello.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.Auth.Hello.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\refint\Avalonia.Auth.Hello.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Hello\obj\Debug\net9.0\Avalonia.Auth.Hello.pdb

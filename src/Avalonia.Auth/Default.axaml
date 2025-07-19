@@ -3,4 +3,6 @@
     <StyleInclude Source="avares://Avalonia.Auth/Styles/AuthProviderButton.axaml" />
     <StyleInclude Source="avares://Avalonia.Auth/Styles/AuthContext.axaml" />
     <StyleInclude Source="avares://Avalonia.Auth/Styles/Link.axaml" />
+    <StyleInclude Source="avares://Avalonia.Auth/Styles/Modal/ContentDialog.axaml" />
+    <StyleInclude Source="avares://Avalonia.Auth/Styles/Modal/DialogControl.axaml" />
 </Styles>

@@ -6,10 +6,10 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Av
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia.Auth.AssemblyInfo.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia.Auth.csproj.CoreCompileInputs.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia.Auth.sourcelink.json
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia\Avalonia.Auth.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia\Avalonia.Auth.pdb
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\refint\Avalonia\Avalonia.Auth.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\bin\Debug\net9.0\Avalonia.Auth.deps.json
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\bin\Debug\net9.0\Avalonia.Auth.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\bin\Debug\net9.0\Avalonia.Auth.pdb
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\ref\Avalonia.Auth.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia.Auth.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\refint\Avalonia.Auth.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth\obj\Debug\net9.0\Avalonia.Auth.pdb

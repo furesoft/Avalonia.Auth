@@ -5,10 +5,12 @@
     <version>1.0.0</version>
     <authors>Avalonia.Auth</authors>
     <description>Package Description</description>
-    <repository type="git" url="https://github.com/furesoft/Avalonia.Auth" commit="f30b004bb2fb081deafe7c516f7ae216d65c9437" />
+    <repository type="git" url="https://github.com/furesoft/Avalonia.Auth" commit="d4fd80a0e05a1cbf3e76cc41e5517b380ce8da46" />
     <dependencies>
       <group targetFramework="net9.0">
-        <dependency id="Avalonia" version="11.1.0" exclude="Build,Analyzers" />
+        <dependency id="Avalonia" version="11.3.2" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Xaml.Interactivity" version="11.3.0.6" exclude="Build,Analyzers" />
+        <dependency id="CommunityToolkit.Mvvm" version="8.4.0" exclude="Build,Analyzers" />
         <dependency id="Splat" version="15.4.1" exclude="Build,Analyzers" />
       </group>
     </dependencies>

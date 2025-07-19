@@ -1,6 +1,8 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="clr-namespace:Avalonia.Auth.Controls">
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
+        xmlns:modal="clr-namespace:Avalonia.Auth.Controls.Modal"
+        xmlns:behaviors="clr-namespace:Avalonia.Auth.Behaviors">
 
     <Style Selector="controls|AuthContext">
         <Setter Property="Background" Value="#e2e2e2" />
@@ -11,75 +13,82 @@
         </Setter>
         <Setter Property="Template">
             <ControlTemplate>
-                <Border x:Name="PART_Border"
-                        CornerRadius="10"
-                        HorizontalAlignment="Center"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="1.5"
-                        Background="{TemplateBinding Background}"
-                        Padding="14,8"
-                        BoxShadow="5 5 10 5 DarkGray">
-                    <StackPanel Spacing="5">
-                        <Label Content="{Binding Options.Title, RelativeSource={RelativeSource TemplatedParent}}"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               Foreground="#222"
-                               HorizontalAlignment="Center"
-                               Margin="0,0,0,10" />
+                <modal:ContentDialog modal:DialogHost.IsHost="True">
+                    <Border x:Name="PART_Border"
+                            CornerRadius="10"
+                            HorizontalAlignment="Center"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1.5"
+                            Background="{TemplateBinding Background}"
+                            Padding="14,8"
+                            BoxShadow="5 5 10 5 DarkGray">
+                        <StackPanel Spacing="5">
+                            <Label Content="{Binding Options.Title, RelativeSource={RelativeSource TemplatedParent}}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#222"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,10" />
 
-                        <StackPanel x:Name="PART_UsernamePasswordPanel"
-                                    HorizontalAlignment="Center"
-                                    IsVisible="{Binding Options.EnableUsernamePassword, RelativeSource={RelativeSource TemplatedParent}}"
-                                    Spacing="5">
-                            <TextBox x:Name="PART_UsernameBox"
-                                     Watermark="Username"
-                                     Margin="0,0,0,5"
-                                     UseFloatingWatermark="True"
-                                     Height="50"
-                                     />
-                            <TextBox x:Name="PART_PasswordBox"
-                                     Watermark="Password"
-                                     Margin="0,0,0,10"
-                                     UseFloatingWatermark="True"
-                                     Height="50"
-                                     PasswordChar="*" />
-                            <controls:Link Title="Forgot password?" Command="{TemplateBinding ForgotPasswordCommand}"
-                                           IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />
-                            <controls:Link Title="Register" Command="{TemplateBinding RegisterCommand}"
-                                           IsVisible="{Binding Options.ShowRegisterLink, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <StackPanel x:Name="PART_UsernamePasswordPanel"
+                                        HorizontalAlignment="Center"
+                                        IsVisible="{Binding Options.EnableUsernamePassword, RelativeSource={RelativeSource TemplatedParent}}"
+                                        Spacing="5">
+                                <TextBox x:Name="PART_UsernameBox"
+                                         Watermark="Username"
+                                         Margin="0,0,0,5"
+                                         UseFloatingWatermark="True"
+                                         Height="50">
+                                    <Interaction.Behaviors>
+                                        <behaviors:FocusBehavior />
+                                    </Interaction.Behaviors>
+                                </TextBox>
+                                <TextBox x:Name="PART_PasswordBox"
+                                         Watermark="Password"
+                                         Margin="0,0,0,10"
+                                         UseFloatingWatermark="True"
+                                         Height="50"
+                                         PasswordChar="*" />
+                                <controls:Link Title="Forgot password?"
+                                               Command="{TemplateBinding ForgotPasswordCommand}"
+                                               IsVisible="{Binding Options.ShowForgotPasswordLink, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <controls:Link Title="Register" Command="{TemplateBinding RegisterCommand}"
+                                               IsVisible="{Binding Options.ShowRegisterLink, RelativeSource={RelativeSource TemplatedParent}}" />
 
-                            <Button x:Name="PART_LoginButton"
-                                    Content="Login"
-                                    Width="220"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,0,0,10"
-                                    Background="#0078D7"
-                                    Foreground="White"
-                                    FontWeight="Bold"
-                                    FontSize="16"
-                                    BorderThickness="0"
-                                    CornerRadius="6"
-                                    Padding="10,6" />
+                                <Button x:Name="PART_LoginButton"
+                                        Content="Login"
+                                        Width="220"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,0,0,10"
+                                        Background="#0078D7"
+                                        Foreground="White"
+                                        FontWeight="Bold"
+                                        FontSize="16"
+                                        BorderThickness="0"
+                                        CornerRadius="6"
+                                        IsDefault="True"
+                                        Padding="10,6" />
+                            </StackPanel>
+
+                            <ItemsControl
+                                ItemsSource="{TemplateBinding Providers}" HorizontalAlignment="Center"
+                                ItemsPanel="{TemplateBinding ItemsPanel}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <controls:AuthProviderButton
+                                            Margin="0,0,0,5"
+                                            Provider="{Binding}"
+                                            Label="{Binding Name}"
+                                            Background="{Binding Background}"
+                                            Foreground="{Binding Foreground}"
+                                            Icon="{Binding Icon}"
+                                            IconOnly="{Binding $parent[controls:AuthContext].MinimalMode}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                         </StackPanel>
-
-                        <ItemsControl
-                            ItemsSource="{TemplateBinding Providers}" HorizontalAlignment="Center"
-                            ItemsPanel="{TemplateBinding ItemsPanel}">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <controls:AuthProviderButton
-                                        Margin="0,0,0,5"
-                                        Provider="{Binding}"
-                                        Label="{Binding Name}"
-                                        Background="{Binding Background}"
-                                        Foreground="{Binding Foreground}"
-                                        Icon="{Binding Icon}"
-                                        IconOnly="{Binding $parent[controls:AuthContext].MinimalMode}" />
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </StackPanel>
-                </Border>
+                    </Border>
+                </modal:ContentDialog>
             </ControlTemplate>
         </Setter>
     </Style>

@@ -1,0 +1,20 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
+        xmlns:modal="clr-namespace:Avalonia.Auth.Controls.Modal">
+
+    <Style Selector="modal|ContentDialog">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Grid>
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                        <Rectangle IsVisible="{TemplateBinding IsOpened}" Fill="Black" Opacity="0.5" />
+                    </Grid>
+
+                    <ContentPresenter Content="{TemplateBinding DialogContent}" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="{TemplateBinding IsOpened}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

@@ -11,8 +11,8 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\ob
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.Auth.Google.AssemblyInfo.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.Auth.Google.csproj.CoreCompileInputs.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.Auth.Google.sourcelink.json
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Google.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Google.pdb
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\refint\Avalonia\Avalonia.Auth.Google.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.B9167244.Up2Date
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\ref\Avalonia.Auth.Google.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.Auth.Google.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\refint\Avalonia.Auth.Google.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Google\obj\Debug\net9.0\Avalonia.Auth.Google.pdb

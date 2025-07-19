@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Avalonia.Auth.Controls.Modal;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml.Templates;
@@ -88,10 +89,22 @@ public class AuthContext : TemplatedControl
             authProvider.Context = this;
         }
 
-        if (Options.EnableUsernamePassword == true)
+        var loginButton = e.NameScope.Find<Button>("PART_LoginButton");
+        loginButton!.Click += async (s, p) =>
         {
             var usernameBox = e.NameScope.Find<TextBox>("PART_UsernameBox");
-            usernameBox?.Focus();
-        }
+            var passwordBox = e.NameScope.Find<TextBox>("PART_PasswordBox");
+            var result = await Options.UsernamePasswordProvider!.AuthenticateAsync(usernameBox!.Text!, passwordBox!.Text!);
+
+            if (result)
+            {
+                AuthenticatedCommand?.Execute(null);
+                return;
+            }
+
+            await DialogHost.ShowAsync("Invalid credentials");
+        };
     }
+
+
 }

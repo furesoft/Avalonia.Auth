@@ -4,10 +4,17 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Avalonia.Auth/Controls/AuthProviderButton.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Controls/Modal/DialogControl.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Controls/Modal/ShowDialogModal.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Default.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Styles/AuthContext.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Styles/AuthProviderButton.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/ContentControl.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/ContentDialog.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/DialogControl.axaml" value="Sample/Sample.csproj" />
         <entry key="Avalonia.Auth/Styles/Link.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/Modal/ShowDialogModal.axaml" value="Sample/Sample.csproj" />
+        <entry key="Avalonia.Auth/Styles/ShowDialogModal.axaml" value="Sample/Sample.csproj" />
         <entry key="Sample/App.axaml" value="Sample/Sample.csproj" />
         <entry key="Sample/MainWindow.axaml" value="Sample/Sample.csproj" />
       </map>

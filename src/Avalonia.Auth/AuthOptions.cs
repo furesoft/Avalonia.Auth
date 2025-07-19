@@ -7,10 +7,12 @@ public class AuthOptions
     internal readonly List<AuthProvider> Providers = [];
 
     public string? Title { get; set; }
-    public bool EnableUsernamePassword { get; set; } = true;
+    internal bool EnableUsernamePassword => UsernamePasswordProvider != null;
     public bool ShowForgotPasswordLink { get; set; } = true;
     public bool ShowRegisterLink { get; set; } = true;
     public bool MinimalMode { get; set; }
+
+    internal IUsernamePasswordProvider? UsernamePasswordProvider;
 
     public AuthOptions AddProvider<TProvider, TOptions>(
         Action<TOptions> configureOptions)
@@ -34,6 +36,13 @@ public class AuthOptions
     {
         Providers.Add(new TProvider());
 
+        return this;
+    }
+
+    public AuthOptions UseUsernamePasswordProvider<TProvider>()
+        where TProvider : IUsernamePasswordProvider, new()
+    {
+        UsernamePasswordProvider = new TProvider();
         return this;
     }
 }

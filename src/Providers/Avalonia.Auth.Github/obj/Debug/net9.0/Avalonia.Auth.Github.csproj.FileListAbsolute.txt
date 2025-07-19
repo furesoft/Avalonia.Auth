@@ -11,8 +11,8 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\ob
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.Auth.Github.AssemblyInfo.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.Auth.Github.csproj.CoreCompileInputs.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.Auth.Github.sourcelink.json
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Github.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia\Avalonia.Auth.Github.pdb
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\refint\Avalonia\Avalonia.Auth.Github.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.AB9FFF7F.Up2Date
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\ref\Avalonia.Auth.Github.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.Auth.Github.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\refint\Avalonia.Auth.Github.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Github\obj\Debug\net9.0\Avalonia.Auth.Github.pdb

@@ -10,9 +10,10 @@ public class GoogleProvider : OAuthProvider
 
     public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Google/Assets/google.png");
 
-    public override void Authenticate()
+    public override async Task<bool> Authenticate()
     {
         var options = GetOptions<GoogleOptions>();
-        Context.AuthenticatedCommand.Execute(null);
+
+        return true;
     }
 }

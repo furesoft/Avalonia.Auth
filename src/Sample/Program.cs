@@ -26,6 +26,8 @@ class Program
                 _.ShowRegisterLink = false;
                 _.MinimalMode = true;
 
+                _.UseUsernamePasswordProvider<SampleUsernamePasswordProvider>();
+
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();
                 _.AddProvider<HelloProvider>();

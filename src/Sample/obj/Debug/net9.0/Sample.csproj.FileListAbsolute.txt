@@ -6,9 +6,6 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.As
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.AssemblyInfo.cs
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.csproj.CoreCompileInputs.cache
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.sourcelink.json
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Avalonia\Sample.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Avalonia\Sample.pdb
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\refint\Avalonia\Sample.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Sample.exe
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Sample.deps.json
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Sample.runtimeconfig.json
@@ -26,7 +23,6 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Vulkan.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Controls.ColorPicker.dll
-C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Controls.DataGrid.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Desktop.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Diagnostics.dll
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Fonts.Inter.dll
@@ -75,3 +71,15 @@ C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Github.pdb
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Google.pdb
 C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Auth.Hello.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\refint\Sample.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\obj\Debug\net9.0\Sample.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Win32.Automation.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\Avalonia.Xaml.Interactivity.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Sample\bin\Debug\net9.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
