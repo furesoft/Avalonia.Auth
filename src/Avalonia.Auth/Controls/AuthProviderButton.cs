@@ -3,6 +3,7 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using Splat;
 
 namespace Avalonia.Auth.Controls;
 
@@ -50,17 +51,22 @@ internal class AuthProviderButton : Button
 
     private void OnProviderChanged()
     {
+        if (Provider == null) return;
+
         Background = new SolidColorBrush(Provider.Background);
         Foreground = new SolidColorBrush(Provider.Foreground);
         if (Provider.Icon is not null)
             Icon = Provider.Icon;
 
-        Label = Provider?.Label;
+        Label = Provider.Label;
     }
 
-    private void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
+    private async void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
     {
-        Provider.Authenticate();
+        if (await Provider.Authenticate())
+        {
+            Provider.Context.AuthenticatedCommand?.Execute(Provider); //Todo: replace Provider with actual user object
+        }
     }
 
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)

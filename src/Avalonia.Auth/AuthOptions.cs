@@ -13,6 +13,7 @@ public class AuthOptions
     public bool MinimalMode { get; set; }
 
     internal IUsernamePasswordProvider? UsernamePasswordProvider;
+    internal IExternalProviderVerification? ExternalProviderVerification;
 
     public AuthOptions AddProvider<TProvider, TOptions>(
         Action<TOptions> configureOptions)
@@ -43,6 +44,13 @@ public class AuthOptions
         where TProvider : IUsernamePasswordProvider, new()
     {
         UsernamePasswordProvider = new TProvider();
+        return this;
+    }
+
+    public AuthOptions UseExternalProviderVerification<TVerification>()
+        where TVerification : IExternalProviderVerification, new()
+    {
+        ExternalProviderVerification = new TVerification();
         return this;
     }
 }
