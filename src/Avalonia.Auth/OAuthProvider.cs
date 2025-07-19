@@ -1,9 +1,14 @@
-﻿namespace Avalonia.Auth;
+﻿using Splat;
+
+namespace Avalonia.Auth;
 
 public class OAuthProvider()
     : AuthProvider
 {
-
+    public override Task<bool> Authenticate()
+    {
+        return Locator.Current.GetService<AuthOptions>().ExternalProviderVerification.Open("");
+    }
 }
 public class OAuthOptions(
     string clientId,

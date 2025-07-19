@@ -11,6 +11,7 @@ public class GithubProvider : OAuthProvider
     public override async Task<bool> Authenticate()
     {
         var options = GetOptions<GithubOptions>();
+        await base.Authenticate();
 
         return true;
     }
