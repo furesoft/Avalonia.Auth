@@ -2,6 +2,7 @@
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using Splat;
 
 namespace Avalonia.Auth;
 
@@ -37,6 +38,14 @@ public abstract class AuthProvider
 
     protected TOptions? GetOptions<TOptions>() where TOptions : class
     {
-        return (TOptions?)Splat.Locator.Current.GetService(typeof(TOptions));
+        var options = (TOptions?)Locator.Current.GetService(typeof(TOptions));
+
+        if (options is null)
+        {
+            options = Activator.CreateInstance<TOptions>();
+            Locator.CurrentMutable.RegisterConstant(options);
+        }
+
+        return options;
     }
 }

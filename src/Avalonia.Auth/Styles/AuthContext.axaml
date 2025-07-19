@@ -11,6 +11,7 @@
                 <StackPanel Spacing="5" />
             </ItemsPanelTemplate>
         </Setter>
+
         <Setter Property="Template">
             <ControlTemplate>
                 <modal:ContentDialog modal:DialogHost.IsHost="True">

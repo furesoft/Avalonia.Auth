@@ -11,6 +11,7 @@
     <Window.DataContext>
         <sample:MainWindowViewModel />
     </Window.DataContext>
+
     <StackPanel Margin="20" Spacing="20" x:DataType="sample:MainWindowViewModel">
         <controls:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
                               IsVisible="{Binding !IsAuthenticated}" />

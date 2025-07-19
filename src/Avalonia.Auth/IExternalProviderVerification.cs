@@ -1,6 +1,8 @@
-﻿namespace Avalonia.Auth;
+﻿using Avalonia.Auth.OAuth;
+
+namespace Avalonia.Auth;
 
 public interface IExternalProviderVerification
 {
-    Task<bool> Open(string url);
+    Task<bool> Open(OAuthOptions ooptions);
 }

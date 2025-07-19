@@ -1,5 +1,14 @@
-﻿namespace Avalonia.Auth.Hello;
+﻿using Avalonia.Auth.OAuth;
 
-public class HelloOptions(string clientId, string clientSecret, string authorizationEndpoint, string tokenEndpoint, string redirectUri) : OAuthOptions(clientId, clientSecret, authorizationEndpoint, tokenEndpoint, redirectUri)
+namespace Avalonia.Auth.Hello;
+
+public class HelloOptions : OAuthOptions
 {
+    public HelloOptions()
+    {
+        Authority = "https://issuer.hello.coop/";
+        ClientId = "app_7VOU7y3FRsPuO2ALng6YQtYc_sWG";
+        Scope = "openid profile name picture github email";
+        ClientSecret = "ZWm-UprQfZ-kRl_TIUaQa";
+    }
 }

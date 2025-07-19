@@ -1,29 +1,22 @@
 ﻿using System.Diagnostics;
 using System.Net;
 using System.Text;
+using Avalonia.Auth.OAuth;
 using Duende.IdentityModel.OidcClient;
 
 namespace Avalonia.Auth.Browser;
 
 public class BrowserVerification : IExternalProviderVerification
 {
-    public async Task<bool> Open(string url)
+    public async Task<bool> Open(OAuthOptions options)
     {
         var redirectUri = "http://127.0.0.1:7890/";
         var http = new HttpListener();
         http.Prefixes.Add(redirectUri);
-        Console.WriteLine("Listening..");
         http.Start();
 
-        var options = new OidcClientOptions
-        {
-            Authority = "https://issuer.hello.coop/",
-            ClientId = "app_7VOU7y3FRsPuO2ALng6YQtYc_sWG",
-            Scope = "openid profile name picture github email",
-            RedirectUri = redirectUri,
-            ClientSecret = "ZWm-UprQfZ-kRl_TIUaQa",
-        };
         options.Policy.Discovery.ValidateEndpoints = false;
+        options.RedirectUri = redirectUri;
 
         var client = new OidcClient(options);
 
@@ -44,17 +37,7 @@ public class BrowserVerification : IExternalProviderVerification
         if (result.IsError)
         {
             Console.WriteLine("\n\nError:\n{0}", result.Error);
-        }
-        else
-        {
-            Console.WriteLine("\n\nClaims:");
-            foreach (var claim in result.User.Claims) Console.WriteLine("{0}: {1}", claim.Type, claim.Value);
-
-            Console.WriteLine();
-            Console.WriteLine("Access token:\n{0}", result.AccessToken);
-
-            if (!string.IsNullOrWhiteSpace(result.RefreshToken))
-                Console.WriteLine("Refresh token:\n{0}", result.RefreshToken);
+            return false;
         }
 
         http.Stop();

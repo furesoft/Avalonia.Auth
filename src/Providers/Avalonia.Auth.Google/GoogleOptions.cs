@@ -1,5 +1,14 @@
-﻿namespace Avalonia.Auth.Google;
+﻿using Avalonia.Auth.OAuth;
 
-public class GoogleOptions(string clientId, string clientSecret, string authorizationEndpoint, string tokenEndpoint, string redirectUri) : OAuthOptions(clientId, clientSecret, authorizationEndpoint, tokenEndpoint, redirectUri)
+namespace Avalonia.Auth.Google;
+
+public class GoogleOptions : OAuthOptions
 {
+    public GoogleOptions()
+    {
+        Authority = "https://accounts.google.com/";
+        Scope = "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email";
+        ClientId = "148559676177-0mm94sppm60kqv6veht8pg29vnh6ji0s.apps.googleusercontent.com";
+        ClientSecret = "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";
+    }
 }
