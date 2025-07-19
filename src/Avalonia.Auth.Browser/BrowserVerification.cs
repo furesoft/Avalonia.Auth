@@ -17,16 +17,17 @@ public class BrowserVerification : IExternalProviderVerification
 
         var options = new OidcClientOptions
         {
-            Authority = "https://demo.duendesoftware.com",
-            ClientId = "interactive.public",
-            Scope = "openid profile api",
-            RedirectUri = redirectUri
+            Authority = "https://issuer.hello.coop/",
+            ClientId = "app_7VOU7y3FRsPuO2ALng6YQtYc_sWG",
+            Scope = "openid profile name picture github email",
+            RedirectUri = redirectUri,
+            ClientSecret = "ZWm-UprQfZ-kRl_TIUaQa",
         };
+        options.Policy.Discovery.ValidateEndpoints = false;
 
         var client = new OidcClient(options);
-        var state = await client.PrepareLoginAsync();
 
-        Console.WriteLine($"Start URL: {state.StartUrl}");
+        var state = await client.PrepareLoginAsync();
 
         Process.Start(new ProcessStartInfo
         {
@@ -34,18 +35,9 @@ public class BrowserVerification : IExternalProviderVerification
             UseShellExecute = true
         });
 
-        // wait for the authorization response.
         var context = await http.GetContextAsync();
 
-        // sends an HTTP response to the browser.
-        var response = context.Response;
-        var responseString =
-            "<html><head><meta http-equiv='refresh' content='10;url=https://demo.duendesoftware.com'></head><body>Please return to the app.</body></html>";
-        var buffer = Encoding.UTF8.GetBytes(responseString);
-        response.ContentLength64 = buffer.Length;
-        var responseOutput = response.OutputStream;
-        await responseOutput.WriteAsync(buffer, 0, buffer.Length);
-        responseOutput.Close();
+        await WriteToBrowser(context);
 
         var result = await client.ProcessResponseAsync(context.Request.RawUrl, state);
 
@@ -66,6 +58,19 @@ public class BrowserVerification : IExternalProviderVerification
         }
 
         http.Stop();
+        Thread.CurrentPrincipal = result.User;
         return true;
+    }
+
+    private static async Task WriteToBrowser(HttpListenerContext context)
+    {
+        var response = context.Response;
+        var responseString =
+            "<html><body>Please return to the app.</body></html>";
+        var buffer = Encoding.UTF8.GetBytes(responseString);
+        response.ContentLength64 = buffer.Length;
+        var responseOutput = response.OutputStream;
+        await responseOutput.WriteAsync(buffer, 0, buffer.Length);
+        responseOutput.Close();
     }
 }
