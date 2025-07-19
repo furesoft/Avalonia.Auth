@@ -18,30 +18,37 @@ public class BrowserVerification : IExternalProviderVerification
         options.Policy.Discovery.ValidateEndpoints = false;
         options.RedirectUri = redirectUri;
 
-        var client = new OidcClient(options);
-
-        var state = await client.PrepareLoginAsync();
-
-        Process.Start(new ProcessStartInfo
+        try
         {
-            FileName = state.StartUrl,
-            UseShellExecute = true
-        });
+            var client = new OidcClient(options);
 
-        var context = await http.GetContextAsync();
+            var state = await client.PrepareLoginAsync();
 
-        await WriteToBrowser(context);
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = state.StartUrl,
+                UseShellExecute = true
+            });
 
-        var result = await client.ProcessResponseAsync(context.Request.RawUrl, state);
+            var context = await http.GetContextAsync();
 
-        if (result.IsError)
+            await WriteToBrowser(context);
+
+            var result = await client.ProcessResponseAsync(context.Request.RawUrl, state);
+
+            if (result.IsError)
+            {
+                Console.WriteLine("\n\nError:\n{0}", result.Error);
+                return false;
+            }
+
+            Thread.CurrentPrincipal = result.User;
+        }
+        finally
         {
-            Console.WriteLine("\n\nError:\n{0}", result.Error);
-            return false;
+            http.Stop();
         }
 
-        http.Stop();
-        Thread.CurrentPrincipal = result.User;
         return true;
     }
 

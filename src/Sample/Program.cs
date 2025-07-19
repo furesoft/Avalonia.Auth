@@ -2,6 +2,7 @@
 using System;
 using Avalonia.Auth;
 using Avalonia.Auth.Browser;
+using Avalonia.Auth.Discord;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
@@ -31,6 +32,7 @@ class Program
 
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();
+                _.AddProvider<DiscordProvider>();
                 _.AddProvider<HelloProvider>();
 
                 _.UseBrowserAuth();
