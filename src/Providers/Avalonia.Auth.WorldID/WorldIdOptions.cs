@@ -6,9 +6,11 @@ public class WorldIdOptions : OAuthOptions
 {
     public WorldIdOptions()
     {
-        Authority = "https://issuer.hello.coop/";
-        ClientId = "app_7VOU7y3FRsPuO2ALng6YQtYc_sWG";
-        Scope = "openid profile name picture github email";
-        ClientSecret = "ZWm-UprQfZ-kRl_TIUaQa";
+        Authority = "https://id.worldcoin.org/";
+        ClientId = "app_5c8a790af0a067432493d01c37d3b927";
+        ClientSecret = "sk_0a39850fc7ddb43fa06467ce52d0d38a19c032708f8b7c00";
+        Scope = "openid profile email";
+        UseHostUriRedirectUrl = true;
+        RedirectUri = "https://id.auth.com";
     }
 }

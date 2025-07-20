@@ -10,7 +10,16 @@ public class BrowserVerification : IExternalProviderVerification
 {
     public async Task<bool> Open(OAuthOptions options)
     {
-        var redirectUri = "http://127.0.0.1:7890/";
+        string redirectUri;
+        if (options.UseHostUriRedirectUrl)
+        {
+            redirectUri = "http://localhost:7890/";
+        }
+        else
+        {
+            redirectUri = "http://127.0.0.1:7890/";
+        }
+
         var http = new HttpListener();
         http.Prefixes.Add(redirectUri);
         http.Start();

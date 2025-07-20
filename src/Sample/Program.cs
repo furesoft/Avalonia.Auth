@@ -3,10 +3,13 @@ using System;
 using Avalonia.Auth;
 using Avalonia.Auth.Browser;
 using Avalonia.Auth.Discord;
+using Avalonia.Auth.Embedded;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
+using Avalonia.Auth.WorldID;
 using Avalonia.Media;
+using Avalonia.WebView.Desktop;
 
 namespace Sample;
 
@@ -34,9 +37,11 @@ class Program
                 _.AddProvider<GithubProvider>();
                 _.AddProvider<DiscordProvider>();
                 _.AddProvider<HelloProvider>();
+                _.AddProvider<WorldIdProvider>();
 
-                _.UseBrowserAuth();
+                _.UseEmbeddedAuth();
             })
             .WithInterFont()
+            .UseDesktopWebView()
             .LogToTrace();
 }
