@@ -40,7 +40,7 @@ All providers that implement `AuthProvider` will be automatically displayed.
 
 ## Assets & Styles
 
-Each provider can define its own icon (PNG) and colors. You can find the default styles in the `Styles` folder.
+Each provider can define its own icon (PNG) and colors.
 
 ## Sample Application
 
@@ -52,4 +52,15 @@ This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
 
 ---
 
-**Avalonia.Auth** – Modern and beautiful authentication for Avalonia UI!
+## Providers supported
+- Google
+- Helló
+- Github
+- Discord
+
+[ ] Facebook
+[ ] Gitlab
+[ ] LinkedIn
+[ ] Microsoft
+[ ] Reddit
+[ ] Twitch
