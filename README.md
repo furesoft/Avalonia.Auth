@@ -35,8 +35,6 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
    ```csharp
             .WithAuth(_ =>
             {
-                _.MinimalMode = true;
-
                 _.AddProvider<GithubProvider>();
                 _.UseBrowserAuth();
             })
