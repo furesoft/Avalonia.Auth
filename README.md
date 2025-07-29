@@ -20,27 +20,47 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 ## Installation
 
-1. Install the NuGet package:
+1. Install the NuGet packages:
    ```shell
    dotnet add package Avalonia.Auth
+   dotnet add package Avalonia.Auth.BrowserAuth
    ```
-2. Add the namespace in your XAML file:
+
+2. Install Providers
+   ```shell
+   dotnet add package Avalonia.Auth.Github
+   ```
+
+3. Configure in Program.cs in BuildAvaloniaApp()
+   ```csharp
+            .WithAuth(_ =>
+            {
+                _.ShowRegisterLink = false;
+                _.MinimalMode = true;
+
+                _.UseUsernamePasswordProvider<SampleUsernamePasswordProvider>();
+
+                _.AddProvider<GoogleProvider>();
+                _.AddProvider<GithubProvider>();
+                _.AddProvider<HelloProvider>();
+
+                _.UseBrowserAuth();
+            })
+   ```
+4. Add the AuthContext to your Window:
    ```xml
    xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
    ```
 
-## Example
+   ```xml
+   <controls:AuthContext />
+   ```
 
-```xml
-<controls:AuthContext />
-```
+All providers that implement `AuthProvider` will be automatically displayed, when they are configured.
 
-All providers that implement `AuthProvider` will be automatically displayed.
-
-
-## Assets & Styles
-
-Each provider can define its own icon (PNG) and colors.
+| :warning: Important           |
+|:----------------------------|
+| If no UsernamePasswordProvider is configured the username and password fields are hidden.  For Authentication an external Auth provider has to be registered (BrowserAuth or EmbeddedAuth) |
 
 ## Sample Application
 
@@ -59,8 +79,13 @@ This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
 - Discord
 
 [ ] Facebook
+
 [ ] Gitlab
+
 [ ] LinkedIn
+
 [ ] Microsoft
+
 [ ] Reddit
+
 [ ] Twitch
