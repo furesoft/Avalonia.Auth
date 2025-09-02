@@ -58,11 +58,6 @@ All providers that implement `AuthProvider` will be automatically displayed, whe
 
 A sample application demonstrating usage can be found in the `Sample` folder.
 
-## License
-
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
-
----
 
 ## Providers supported
 - Google
