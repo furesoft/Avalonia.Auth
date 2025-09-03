@@ -1,7 +1,8 @@
 ﻿using Splat;
+using Avalonia.Metadata;
 
-[assembly: XmlNsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.Controls")]
-[assembly: XmlNsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.MarkupExtensions")]
+[assembly: XmlnsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.Controls")]
+[assembly: XmlnsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.MarkupExtensions")]
 
 namespace Avalonia.Auth;
 
