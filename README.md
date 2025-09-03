@@ -41,7 +41,7 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
    ```
 4. Add the AuthContext to your Window:
    ```xml
-   xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
+   xmlns:controls="http://furesoft.de/schemas/auth"
    ```
 
    ```xml
