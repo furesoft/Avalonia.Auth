@@ -12,8 +12,8 @@ public class AuthOptions
     public bool ShowRegisterLink { get; set; } = true;
     public bool MinimalMode { get; set; }
 
-    internal IUsernamePasswordProvider? UsernamePasswordProvider;
-    internal IExternalProviderVerification? ExternalProviderVerification;
+    public IUsernamePasswordProvider? UsernamePasswordProvider { get; private set; }
+    public IExternalProviderVerification? ExternalProviderVerification { get; private set; }
 
     public AuthOptions AddProvider<TProvider, TOptions>(
         Action<TOptions> configureOptions)

@@ -8,6 +8,8 @@ namespace Avalonia.Auth.Browser;
 
 public class BrowserVerification : IExternalProviderVerification
 {
+    public string ResponseTemplate => "<html><body>Please return to the app.</body></html>";
+
     public async Task<bool> Open(OAuthOptions options)
     {
         string redirectUri;
@@ -61,15 +63,13 @@ public class BrowserVerification : IExternalProviderVerification
         return true;
     }
 
-    private static async Task WriteToBrowser(HttpListenerContext context)
+    private async Task WriteToBrowser(HttpListenerContext context)
     {
         var response = context.Response;
-        var responseString =
-            "<html><body>Please return to the app.</body></html>";
-        var buffer = Encoding.UTF8.GetBytes(responseString);
+        var buffer = Encoding.UTF8.GetBytes(ResponseTemplate);
         response.ContentLength64 = buffer.Length;
-        var responseOutput = response.OutputStream;
-        await responseOutput.WriteAsync(buffer, 0, buffer.Length);
-        responseOutput.Close();
+
+        await response.OutputStream.WriteAsync(buffer);
+        response.OutputStream.Close();
     }
 }
