@@ -2,6 +2,14 @@
 
 Avalonia.Auth is a flexible and modern authentication library for Avalonia UI applications. It provides reusable UI components and easy integration of OAuth providers such as Google, GitHub, and Hello.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/furesoft/Avalonia.Auth/badge)](https://www.codefactor.io/repository/github/furesoft/Avalonia.Auth)
+![NuGet Version](https://img.shields.io/nuget/v/Avalonia.Auth)
+![NuGet Downloads](https://img.shields.io/nuget/dt/Avalonia.Auth)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Discord](https://img.shields.io/discord/455738571186241536)
+![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/nuget/Avalonia.Auth)
+[![](https://tokei.rs/b1/github/furesoft/Avalonia.Auth)](https://github.com/furesoft/Avalonia.Auth)
+
 ## Features
 
 - **AuthContext**: Customizable authentication context for different providers
@@ -12,36 +20,59 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 ## Installation
 
-1. Install the NuGet package:
+1. Install the NuGet packages:
    ```shell
    dotnet add package Avalonia.Auth
+   dotnet add package Avalonia.Auth.BrowserAuth
    ```
-2. Add the namespace in your XAML file:
+
+2. Install Providers
+   ```shell
+   dotnet add package Avalonia.Auth.Github
+   ```
+
+3. Configure in Program.cs in BuildAvaloniaApp()
+   ```csharp
+   .WithAuth(_ =>
+   {
+       _.AddProvider<GithubProvider>();
+       _.UseBrowserAuth();
+   })
+   ```
+4. Add the AuthContext to your Window:
    ```xml
-   xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
+   xmlns:controls="http://furesoft.de/schemas/auth"
    ```
 
-## Example
+   ```xml
+   <controls:AuthContext />
+   ```
 
-```xml
-<controls:AuthContext />
-```
+All providers that implement `AuthProvider` will be automatically displayed, when they are configured.
 
-All providers that implement `AuthProvider` will be automatically displayed.
-
-
-## Assets & Styles
-
-Each provider can define its own icon (PNG) and colors. You can find the default styles in the `Styles` folder.
+| :warning: Important           |
+|:----------------------------|
+| If no UsernamePasswordProvider is configured the username and password fields are hidden.  For Authentication an external Auth provider has to be registered (BrowserAuth or EmbeddedAuth) |
 
 ## Sample Application
 
 A sample application demonstrating usage can be found in the `Sample` folder.
 
-## License
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+## Providers supported
+- Google
+- Helló
+- Github
+- Discord
 
----
+[ ] Facebook
 
-**Avalonia.Auth** – Modern and beautiful authentication for Avalonia UI!
+[ ] Gitlab
+
+[ ] LinkedIn
+
+[ ] Microsoft
+
+[ ] Reddit
+
+[ ] Twitch

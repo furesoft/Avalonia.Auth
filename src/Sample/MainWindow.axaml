@@ -2,9 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="clr-namespace:Avalonia.Auth.Controls;assembly=Avalonia.Auth"
+        xmlns:auth="http://furesoft.de/schemas/auth"
         xmlns:sample="clr-namespace:Sample"
-        xmlns:markupExtensions="clr-namespace:Avalonia.Auth.MarkupExtensions;assembly=Avalonia.Auth"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Sample.MainWindow"
         Title="Sample">
@@ -13,12 +12,12 @@
     </Window.DataContext>
 
     <StackPanel Margin="20" Spacing="20" x:DataType="sample:MainWindowViewModel">
-        <controls:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
+        <auth:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
                               IsVisible="{Binding !IsAuthenticated}" />
 
         <StackPanel Orientation="Horizontal" IsVisible="{Binding IsAuthenticated}">
             <TextBlock Text="Welcome "  />
-            <TextBlock Text="{markupExtensions:PrincipalName}"  />
+            <TextBlock Text="{auth:PrincipalName}"  />
         </StackPanel>
     </StackPanel>
 </Window>
