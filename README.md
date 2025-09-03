@@ -33,11 +33,11 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 3. Configure in Program.cs in BuildAvaloniaApp()
    ```csharp
-            .WithAuth(_ =>
-            {
-                _.AddProvider<GithubProvider>();
-                _.UseBrowserAuth();
-            })
+   .WithAuth(_ =>
+   {
+       _.AddProvider<GithubProvider>();
+       _.UseBrowserAuth();
+   })
    ```
 4. Add the AuthContext to your Window:
    ```xml
