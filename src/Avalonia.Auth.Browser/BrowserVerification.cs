@@ -3,6 +3,7 @@ using System.Net;
 using System.Text;
 using Avalonia.Auth.OAuth;
 using Duende.IdentityModel.OidcClient;
+using Splat;
 
 namespace Avalonia.Auth.Browser;
 
@@ -53,7 +54,8 @@ public class BrowserVerification : IExternalProviderVerification
                 return false;
             }
 
-            Thread.CurrentPrincipal = result.User;
+            var session = Locator.Current.GetService<Session>()!;
+            session.Principal = result.User;
         }
         finally
         {

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Avalonia.Auth.Fusio</id>
+    <version>1.0.0</version>
+    <authors>Avalonia.Auth.Fusio</authors>
+    <description>Package Description</description>
+    <repository type="git" url="https://github.com/furesoft/Avalonia.Auth" commit="886098acc035ced69b9b6145b0c0a2354d68a5e0" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Avalonia.Auth" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\chris\RiderProjects\Avalonia.Auth\src\Providers\Avalonia.Auth.Fusio\bin\Debug\net9.0\Avalonia.Auth.Fusio.dll" target="lib\net9.0\Avalonia.Auth.Fusio.dll" />
+  </files>
+</package>

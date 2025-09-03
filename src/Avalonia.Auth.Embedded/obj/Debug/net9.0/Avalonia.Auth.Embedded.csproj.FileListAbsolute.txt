@@ -1,0 +1,17 @@
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\bin\Debug\net9.0\Avalonia.Auth.Embedded.deps.json
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\bin\Debug\net9.0\Avalonia.Auth.Embedded.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\bin\Debug\net9.0\Avalonia.Auth.Embedded.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\bin\Debug\net9.0\Avalonia.Auth.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\bin\Debug\net9.0\Avalonia.Auth.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.csproj.AssemblyReference.cache
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia\Resources.Inputs.cache
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.AssemblyInfoInputs.cache
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.AssemblyInfo.cs
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.csproj.CoreCompileInputs.cache
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.sourcelink.json
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.95A3863C.Up2Date
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\refint\Avalonia.Auth.Embedded.dll
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\Avalonia.Auth.Embedded.pdb
+C:\Users\chris\RiderProjects\Avalonia.Auth\src\Avalonia.Auth.Embedded\obj\Debug\net9.0\ref\Avalonia.Auth.Embedded.dll

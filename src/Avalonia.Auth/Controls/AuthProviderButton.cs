@@ -65,7 +65,9 @@ internal class AuthProviderButton : Button
     {
         if (await Provider.Authenticate())
         {
-            Provider.Context.AuthenticatedCommand?.Execute(Provider); //Todo: replace Provider with actual user object
+            var session = Locator.Current.GetService<Session>()!;
+
+            Provider.Context.AuthenticatedCommand?.Execute(session);
         }
     }
 

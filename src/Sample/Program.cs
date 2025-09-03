@@ -8,7 +8,6 @@ using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
 using Avalonia.Auth.WorldID;
-using Avalonia.Media;
 using Avalonia.WebView.Desktop;
 
 namespace Sample;
@@ -39,7 +38,7 @@ class Program
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<WorldIdProvider>();
 
-                _.UseEmbeddedAuth();
+                _.UseBrowserAuth();
             })
             .WithInterFont()
             .UseDesktopWebView()

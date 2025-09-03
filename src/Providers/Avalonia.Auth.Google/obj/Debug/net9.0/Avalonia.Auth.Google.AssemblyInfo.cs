@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Avalonia.Auth.Google")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66916f151c577035151f266c724d5a318000b57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4800c40ee6d3a2dc395b4c0425b192ada15284a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Avalonia.Auth.Google")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Avalonia.Auth.Google")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

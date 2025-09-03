@@ -16,6 +16,8 @@ public static class LoginAppBuilderExtensions
             var options = new AuthOptions();
             configureOptions(options);
             Locator.CurrentMutable.RegisterConstant(options);
+
+            Locator.CurrentMutable.RegisterConstant(new Session());
         });
 
         return builder;
