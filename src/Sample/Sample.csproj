@@ -31,6 +31,7 @@
       <ProjectReference Include="..\Avalonia.Auth.Embedded\Avalonia.Auth.Embedded.csproj" />
       <ProjectReference Include="..\Avalonia.Auth\Avalonia.Auth.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Discord\Avalonia.Auth.Discord.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Fusio\Avalonia.Auth.Fusio.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj" />

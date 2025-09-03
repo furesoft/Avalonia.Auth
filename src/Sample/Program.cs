@@ -4,6 +4,7 @@ using Avalonia.Auth;
 using Avalonia.Auth.Browser;
 using Avalonia.Auth.Discord;
 using Avalonia.Auth.Embedded;
+using Avalonia.Auth.Fusio;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
@@ -33,6 +34,7 @@ class Program
 
                 _.UseUsernamePasswordProvider<SampleUsernamePasswordProvider>();
 
+                _.AddProvider<FusioProvider>();
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();
                 _.AddProvider<DiscordProvider>();
