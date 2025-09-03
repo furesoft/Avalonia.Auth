@@ -1,5 +1,7 @@
 ﻿using Splat;
 
+[assembly: XmlNsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.Controls")]
+
 namespace Avalonia.Auth;
 
 public static class LoginAppBuilderExtensions
