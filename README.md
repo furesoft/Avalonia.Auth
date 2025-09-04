@@ -1,7 +1,5 @@
 ﻿# Avalonia.Auth
 
-Avalonia.Auth is a flexible and modern authentication library for Avalonia UI applications. It provides reusable UI components and easy integration of OAuth providers such as Google, GitHub, and Hello.
-
 [![CodeFactor](https://www.codefactor.io/repository/github/furesoft/Avalonia.Auth/badge)](https://www.codefactor.io/repository/github/furesoft/Avalonia.Auth)
 ![NuGet Version](https://img.shields.io/nuget/v/Avalonia.Auth)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/Avalonia.Auth)
@@ -9,6 +7,8 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 ![Discord](https://img.shields.io/discord/455738571186241536)
 ![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/nuget/Avalonia.Auth)
 [![](https://tokei.rs/b1/github/furesoft/Avalonia.Auth)](https://github.com/furesoft/Avalonia.Auth)
+
+Avalonia.Auth is a flexible and modern authentication library for Avalonia UI applications. It provides reusable UI components and easy integration of OAuth providers such as Google, GitHub, and Hello.
 
 ## Features
 
