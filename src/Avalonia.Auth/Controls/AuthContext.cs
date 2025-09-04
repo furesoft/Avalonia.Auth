@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Avalonia.Auth.Controls.Modal;
 using Avalonia.Controls;
@@ -105,6 +105,4 @@ public class AuthContext : TemplatedControl
             await DialogHost.ShowAsync("Invalid credentials");
         };
     }
-
-
 }
