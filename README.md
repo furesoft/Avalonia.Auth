@@ -66,12 +66,8 @@ A sample application demonstrating usage can be found in the `Sample` folder.
 - Helló
 - Github
 - Discord
+- WorldID
 
-[ ] Facebook
-
-[ ] Gitlab
-
-[ ] LinkedIn
 
 [ ] Microsoft
 
