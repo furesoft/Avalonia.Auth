@@ -60,6 +60,7 @@ A sample application demonstrating usage can be found in the `Sample` folder.
 
 <img width="452" height="396" alt="image" src="https://github.com/user-attachments/assets/d27e47c5-9c8f-4bb3-9be6-663c42cbce93" />
 
+The AuthContext has two mode (Minimal, Default). When minimal mode is selected the icons of the providers will be smaller.   
 
 ## Providers supported
 - Google
