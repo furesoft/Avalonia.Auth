@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 
 namespace Avalonia.Auth.Controls.Modal;
 
@@ -21,5 +21,4 @@ internal class ContentDialog : ContentControl
         get => GetValue(IsOpenedProperty);
         set => SetValue(IsOpenedProperty, value);
     }
-
 }

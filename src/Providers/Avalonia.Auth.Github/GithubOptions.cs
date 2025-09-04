@@ -1,4 +1,4 @@
-﻿using Avalonia.Auth.OAuth;
+using Avalonia.Auth.OAuth;
 using Duende.IdentityModel.Jwk;
 
 namespace Avalonia.Auth.Github;
@@ -21,5 +21,4 @@ public class GithubOptions : OAuthOptions
 
         Policy.Discovery.ValidateIssuerName = false;
     }
-
 }

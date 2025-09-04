@@ -1,4 +1,4 @@
-﻿using Splat;
+using Splat;
 using Avalonia.Metadata;
 
 [assembly: XmlnsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.Controls")]
@@ -8,7 +8,6 @@ namespace Avalonia.Auth;
 
 public static class LoginAppBuilderExtensions
 {
-
     public static AppBuilder WithAuth(this AppBuilder builder, Action<AuthOptions> configureOptions)
     {
         builder.AfterSetup(_ =>
