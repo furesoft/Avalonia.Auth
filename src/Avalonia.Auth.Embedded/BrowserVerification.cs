@@ -1,6 +1,4 @@
-﻿using System.Net;
-using System.Text;
-using Avalonia.Auth.OAuth;
+﻿using Avalonia.Auth.OAuth;
 using Avalonia.Controls;
 using Duende.IdentityModel.OidcClient;
 using Splat;
@@ -67,15 +65,5 @@ public class BrowserVerification : IExternalProviderVerification
 
         window.Show();
         return tcs.Task;
-    }
-
-    private static async Task WriteToBrowser(HttpListenerContext context)
-    {
-        var response = context.Response;
-        var buffer = Encoding.UTF8.GetBytes(ResponseTemplate);
-        response.ContentLength64 = buffer.Length;
-        var responseOutput = response.OutputStream;
-        await responseOutput.WriteAsync(buffer);
-        responseOutput.Close();
     }
 }

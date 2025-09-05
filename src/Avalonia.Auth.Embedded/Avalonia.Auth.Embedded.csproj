@@ -12,8 +12,8 @@
 
     <ItemGroup>
         <PackageReference Include="Duende.IdentityModel.OidcClient" Version="6.0.1" />
-        <PackageReference Include="WebView.Avalonia.Cross" Version="11.2.4" />
-        <PackageReference Include="WebView.Avalonia.Desktop.Cross" Version="11.2.4" />
+        <PackageReference Include="WebView.Avalonia.Cross" Version="11.3.1" />
+        <PackageReference Include="WebView.Avalonia.Desktop.Cross" Version="11.3.1" />
     </ItemGroup>
 
 </Project>
