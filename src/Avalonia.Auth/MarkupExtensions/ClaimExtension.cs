@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Markup.Xaml;
 using Splat;
 
 namespace Avalonia.Auth.MarkupExtensions;

@@ -1,4 +1,6 @@
 ﻿using System.Security.Claims;
+using System.Security.Principal;
+using Avalonia.Data.Converters;
 using Avalonia.Markup.Xaml;
 using Splat;
 
@@ -11,8 +13,9 @@ public class HasRoleExtension : MarkupExtension
     public override object ProvideValue(IServiceProvider serviceProvider)
     {
         var session = Locator.Current.GetService<Session>()!;
-        var principal = Thread.CurrentPrincipal as ClaimsPrincipal;
 
-        return principal?.IsInRole(Role) ?? false;
+        var binding = session.CreateBinding("Principal");
+        binding.Converter = new FuncValueConverter<IPrincipal?, bool>(p => p.IsInRole(Role));
+        return binding;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using Avalonia.Data.Converters;
 using Avalonia.Markup.Xaml;
 using Splat;
 
@@ -12,7 +13,8 @@ public class HasClaimExtension : MarkupExtension
     {
         var session = Locator.Current.GetService<Session>()!;
 
-        var principal = Thread.CurrentPrincipal as ClaimsPrincipal;
-        return principal?.HasClaim(ClaimType, ClaimValue) ?? false;
+        var binding = session.CreateBinding("Principal");
+        binding.Converter = new FuncValueConverter<ClaimsPrincipal?, bool>(p => p.HasClaim(ClaimType, ClaimValue));
+        return binding;
     }
 }
