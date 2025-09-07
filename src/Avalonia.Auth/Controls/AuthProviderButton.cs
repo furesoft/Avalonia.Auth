@@ -2,7 +2,6 @@
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Media;
-using Avalonia.Media.Imaging;
 using Splat;
 
 namespace Avalonia.Auth.Controls;
@@ -19,6 +18,15 @@ internal class AuthProviderButton : Button
 
     public static readonly StyledProperty<AuthProvider> ProviderProperty =
         AvaloniaProperty.Register<AuthProviderButton, AuthProvider>(nameof(Provider));
+
+    public static readonly StyledProperty<AuthProviderButtonState> StateProperty =
+        AvaloniaProperty.Register<AuthProviderButton, AuthProviderButtonState>(nameof(State), AuthProviderButtonState.Normal);
+
+    public AuthProviderButtonState State
+    {
+        get => GetValue(StateProperty);
+        set => SetValue(StateProperty, value);
+    }
 
     public IImage Icon
     {
@@ -63,11 +71,20 @@ internal class AuthProviderButton : Button
 
     private async void AuthProviderButton_OnPointerPressed(object? sender, PointerPressedEventArgs e)
     {
-        if (await Provider.Authenticate())
-        {
-            var session = Locator.Current.GetService<Session>()!;
+        State = AuthProviderButtonState.Loading;
 
-            Provider.Context.AuthenticatedCommand?.Execute(session);
+        try
+        {
+            if (await Provider.Authenticate())
+            {
+                var session = Locator.Current.GetService<Session>()!;
+
+                Provider.Context.AuthenticatedCommand?.Execute(session);
+            }
+        }
+        catch
+        {
+            State = AuthProviderButtonState.Error;
         }
     }
 

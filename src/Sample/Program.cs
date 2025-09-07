@@ -37,7 +37,7 @@ class Program
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<WorldIdProvider>();
 
-                _.UseBrowserAuth();
+                _.UseEmbeddedAuth();
             })
             .WithInterFont()
             .UseDesktopWebView()

@@ -1,0 +1,25 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://furesoft.de/schemas/auth"
+        xmlns:ring="clr-namespace:AvaloniaProgressRing;assembly=AvaloniaProgressRing"
+        xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
+    <Style Selector="controls|StateDisplay">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <ContentPresenter Content="{TemplateBinding Content}" IsVisible="{TemplateBinding IsNormal, Mode=TwoWay}" />
+                    <ring:ProgressRing Width="32"
+                                       Height="32"
+                                       IsVisible="{TemplateBinding IsLoading, Mode=TwoWay}"
+                                       IsActive="{TemplateBinding IsLoading, Mode=TwoWay}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="Gray"
+                    />
+
+                    <avalonia:MaterialIcon Kind="Error" IsVisible="{TemplateBinding IsError}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
