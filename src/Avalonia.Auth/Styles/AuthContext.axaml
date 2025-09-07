@@ -30,6 +30,7 @@
                                    Foreground="#222"
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,10" />
+                            <Image Source="{TemplateBinding Logo}" Height="150" />
 
                             <StackPanel x:Name="PART_UsernamePasswordPanel"
                                         HorizontalAlignment="Center"

@@ -13,7 +13,9 @@
 
     <StackPanel Margin="20" Spacing="20" x:DataType="sample:MainWindowViewModel">
         <auth:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
-                              IsVisible="{Binding !IsAuthenticated}" />
+                              IsVisible="{Binding !IsAuthenticated}"
+                              Logo="avares://Sample/Assets/logo.png"
+        />
 
         <StackPanel Orientation="Horizontal" IsVisible="{Binding IsAuthenticated}">
             <TextBlock Text="Welcome "  />

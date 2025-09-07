@@ -4,6 +4,7 @@ using Avalonia.Auth.Controls.Modal;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml.Templates;
+using Avalonia.Media;
 using Splat;
 
 namespace Avalonia.Auth.Controls;
@@ -30,6 +31,15 @@ public class AuthContext : TemplatedControl
 
     public static readonly StyledProperty<ICommand> AuthenticatedCommandProperty =
         AvaloniaProperty.Register<AuthContext, ICommand>(nameof(AuthenticatedCommand));
+
+    public static readonly StyledProperty<IImage> LogoProperty =
+        AvaloniaProperty.Register<AuthContext, IImage>(nameof(Logo));
+
+    public IImage Logo
+    {
+        get => GetValue(LogoProperty);
+        set => SetValue(LogoProperty, value);
+    }
 
     public ICommand AuthenticatedCommand
     {
