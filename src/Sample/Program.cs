@@ -2,13 +2,13 @@
 using System;
 using Avalonia.Auth;
 using Avalonia.Auth.Browser;
-using Avalonia.Auth.Discord;
 using Avalonia.Auth.Embedded;
-using Avalonia.Auth.Github;
-using Avalonia.Auth.Google;
-using Avalonia.Auth.Hello;
-using Avalonia.Auth.Providers.Microsoft;
-using Avalonia.Auth.WorldID;
+using Avalonia.Auth.Provider.Discord;
+using Avalonia.Auth.Provider.Github;
+using Avalonia.Auth.Provider.Google;
+using Avalonia.Auth.Provider.Hello;
+using Avalonia.Auth.Provider.Microsoft;
+using Avalonia.Auth.Provider.WorldID;
 using Avalonia.WebView.Desktop;
 
 namespace Sample;

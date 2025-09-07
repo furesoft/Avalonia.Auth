@@ -1,6 +1,6 @@
 ﻿using Avalonia.Auth.OAuth;
 
-namespace Avalonia.Auth.Hello;
+namespace Avalonia.Auth.Provider.Hello;
 
 public class HelloOptions : OAuthOptions
 {

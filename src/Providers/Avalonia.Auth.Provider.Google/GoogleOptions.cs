@@ -1,6 +1,6 @@
 ﻿using Avalonia.Auth.OAuth;
 
-namespace Avalonia.Auth.Google;
+namespace Avalonia.Auth.Provider.Google;
 
 public class GoogleOptions : OAuthOptions
 {

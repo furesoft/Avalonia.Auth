@@ -1,6 +1,6 @@
 ﻿using Avalonia.Auth.OAuth;
 
-namespace Avalonia.Auth.Discord;
+namespace Avalonia.Auth.Provider.Discord;
 
 public class DiscordOptions : OAuthOptions
 {

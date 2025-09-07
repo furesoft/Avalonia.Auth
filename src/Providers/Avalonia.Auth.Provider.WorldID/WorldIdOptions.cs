@@ -1,6 +1,6 @@
 ﻿using Avalonia.Auth.OAuth;
 
-namespace Avalonia.Auth.WorldID;
+namespace Avalonia.Auth.Provider.WorldID;
 
 public class WorldIdOptions : OAuthOptions
 {

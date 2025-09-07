@@ -1,7 +1,7 @@
 using Avalonia.Auth.OAuth;
 using Duende.IdentityModel.Jwk;
 
-namespace Avalonia.Auth.Github;
+namespace Avalonia.Auth.Provider.Github;
 
 public class GithubOptions : OAuthOptions
 {

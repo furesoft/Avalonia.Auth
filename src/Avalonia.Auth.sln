@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth", "Avalonia.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{DE4CF7C1-7B91-4B3B-81C2-B4AF4A62B6BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Google", "Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj", "{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Google", "Providers\Avalonia.Auth.Provider.Google\Avalonia.Auth.Provider.Google.csproj", "{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{5432FED4-2A2C-4E12-B413-56869F59B9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Github", "Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj", "{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Github", "Providers\Avalonia.Auth.Provider.Github\Avalonia.Auth.Provider.Github.csproj", "{C28D0CE8-8E50-40C3-B0CC-C6A430DDD0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Hello", "Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj", "{05FBA132-C798-49A6-9247-331797676A12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Hello", "Providers\Avalonia.Auth.Provider.Hello\Avalonia.Auth.Provider.Hello.csproj", "{05FBA132-C798-49A6-9247-331797676A12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{B730CA00-A750-438A-8D2B-15F6FFE2A893}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,13 +22,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{B730CA00
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Browser", "Avalonia.Auth.Browser\Avalonia.Auth.Browser.csproj", "{5E2BCB23-0E91-44D1-96CE-99E160E79267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Discord", "Providers\Avalonia.Auth.Discord\Avalonia.Auth.Discord.csproj", "{0A43F2B3-294D-4309-9523-A30919FF6916}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Discord", "Providers\Avalonia.Auth.Provider.Discord\Avalonia.Auth.Provider.Discord.csproj", "{0A43F2B3-294D-4309-9523-A30919FF6916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.WorldID", "Providers\Avalonia.Auth.WorldID\Avalonia.Auth.WorldID.csproj", "{09F56A39-1119-40EE-B978-57121EEE51FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.WorldID", "Providers\Avalonia.Auth.Provider.WorldID\Avalonia.Auth.Provider.WorldID.csproj", "{09F56A39-1119-40EE-B978-57121EEE51FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Embedded", "Avalonia.Auth.Embedded\Avalonia.Auth.Embedded.csproj", "{94BD7159-F93A-4812-983C-9644D3ACDB5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Providers.Microsoft", "Providers\Avalonia.Auth.Providers.Microsoft\Avalonia.Auth.Providers.Microsoft.csproj", "{E71227CC-5736-4C0E-8EEF-FD492AE384E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Microsoft", "Providers\Avalonia.Auth.Provider.Microsoft\Avalonia.Auth.Provider.Microsoft.csproj", "{E71227CC-5736-4C0E-8EEF-FD492AE384E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Browsers", "Browsers", "{91FA39F2-11C6-47DF-8D07-932B953F88E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,5 +89,7 @@ Global
 		{0A43F2B3-294D-4309-9523-A30919FF6916} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 		{09F56A39-1119-40EE-B978-57121EEE51FB} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 		{E71227CC-5736-4C0E-8EEF-FD492AE384E0} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
+		{5E2BCB23-0E91-44D1-96CE-99E160E79267} = {91FA39F2-11C6-47DF-8D07-932B953F88E4}
+		{94BD7159-F93A-4812-983C-9644D3ACDB5D} = {91FA39F2-11C6-47DF-8D07-932B953F88E4}
 	EndGlobalSection
 EndGlobal

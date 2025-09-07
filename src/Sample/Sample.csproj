@@ -30,11 +30,11 @@
       <ProjectReference Include="..\Avalonia.Auth.Browser\Avalonia.Auth.Browser.csproj" />
       <ProjectReference Include="..\Avalonia.Auth.Embedded\Avalonia.Auth.Embedded.csproj" />
       <ProjectReference Include="..\Avalonia.Auth\Avalonia.Auth.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Discord\Avalonia.Auth.Discord.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Providers.Microsoft\Avalonia.Auth.Providers.Microsoft.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.WorldID\Avalonia.Auth.WorldID.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Discord\Avalonia.Auth.Provider.Discord.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Github\Avalonia.Auth.Provider.Github.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Google\Avalonia.Auth.Provider.Google.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Hello\Avalonia.Auth.Provider.Hello.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Microsoft\Avalonia.Auth.Provider.Microsoft.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.WorldID\Avalonia.Auth.Provider.WorldID.csproj" />
     </ItemGroup>
 </Project>

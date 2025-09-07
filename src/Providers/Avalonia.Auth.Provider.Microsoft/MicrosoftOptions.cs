@@ -1,6 +1,6 @@
 ﻿using Avalonia.Auth.OAuth;
 
-namespace Avalonia.Auth.Providers.Microsoft;
+namespace Avalonia.Auth.Provider.Microsoft;
 
 public class MicrosoftOptions : OAuthOptions
 {
