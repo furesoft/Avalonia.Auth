@@ -103,7 +103,7 @@ public class AuthContext : TemplatedControl
         {
             var usernameBox = e.NameScope.Find<TextBox>("PART_UsernameBox");
             var passwordBox = e.NameScope.Find<TextBox>("PART_PasswordBox");
-            var result = await Options.UsernamePasswordProvider!.AuthenticateAsync(usernameBox!.Text!, passwordBox!.Text!);
+            var result = await Options.CredentialProvider!.AuthenticateAsync(usernameBox!.Text!, passwordBox!.Text!);
 
             if (result)
             {
