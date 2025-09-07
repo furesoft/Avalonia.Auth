@@ -3,7 +3,7 @@ using Avalonia.Auth;
 
 namespace Sample;
 
-public class SampleUsernamePasswordProvider : IUsernamePasswordProvider
+public class SampleCredentialsProvider : ICredentialsProvider
 {
     public Task<bool> AuthenticateAsync(string username, string password)
     {

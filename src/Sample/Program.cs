@@ -3,6 +3,7 @@ using System;
 using Avalonia.Auth;
 using Avalonia.Auth.Browser;
 using Avalonia.Auth.Embedded;
+using Avalonia.Auth.Provider.Auth0;
 using Avalonia.Auth.Provider.Discord;
 using Avalonia.Auth.Provider.Github;
 using Avalonia.Auth.Provider.Google;
@@ -30,7 +31,11 @@ class Program
             {
                 _.ShowRegisterLink = false;
 
-                _.UseUsernamePasswordProvider<SampleUsernamePasswordProvider>();
+                _.UseCredentialProvider<Auth0CredentialsProvider>(_ =>
+                {
+                    _.Domain = "anders-software.eu.auth0.com";
+                    _.ClientId = "T9PvTJOweIk0HraP0TOW0B4I0RwmvkjS";
+                });
 
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();

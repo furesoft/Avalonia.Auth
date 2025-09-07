@@ -7,11 +7,11 @@ public class AuthOptions
     internal readonly List<AuthProvider> Providers = [];
 
     public string? Title { get; set; }
-    internal bool EnableUsernamePassword => UsernamePasswordProvider != null;
+    internal bool EnableUsernamePassword => CredentialProvider != null;
     public bool ShowForgotPasswordLink { get; set; } = true;
     public bool ShowRegisterLink { get; set; } = true;
 
-    public IUsernamePasswordProvider? UsernamePasswordProvider { get; private set; }
+    public ICredentialsProvider? CredentialProvider { get; private set; }
     public IExternalProviderVerification? ExternalProviderVerification { get; private set; }
 
     public AuthOptions AddProvider<TProvider, TOptions>(
@@ -39,10 +39,19 @@ public class AuthOptions
         return this;
     }
 
-    public AuthOptions UseUsernamePasswordProvider<TProvider>()
-        where TProvider : IUsernamePasswordProvider, new()
+    public AuthOptions UseCredentialProvider<TProvider>()
+        where TProvider : ICredentialsProvider, new()
     {
-        UsernamePasswordProvider = new TProvider();
+        CredentialProvider = new TProvider();
+        return this;
+    }
+
+    public AuthOptions UseCredentialProvider<TProvider>(Action<TProvider> configurer)
+        where TProvider : ICredentialsProvider, new()
+    {
+        CredentialProvider = new TProvider();
+        configurer((TProvider)CredentialProvider);
+
         return this;
     }
 
