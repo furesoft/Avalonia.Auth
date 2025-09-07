@@ -5,16 +5,16 @@ namespace Avalonia.Auth.Controls.Modal;
 
 public class DialogControl : ContentControl
 {
-    public static StyledProperty<ICommand> CommandProperty =
+    public static readonly StyledProperty<ICommand> CommandProperty =
         AvaloniaProperty.Register<DialogControl, ICommand>(nameof(Command));
 
-    public static StyledProperty<string> CommandTextProperty =
+    public static readonly StyledProperty<string> CommandTextProperty =
         AvaloniaProperty.Register<DialogControl, string>(nameof(CommandText));
 
-    public static StyledProperty<string> HeaderProperty =
+    public static readonly StyledProperty<string> HeaderProperty =
         AvaloniaProperty.Register<DialogControl, string>(nameof(Header));
 
-    public static StyledProperty<bool> IsCancelEnabledProperty =
+    public static readonly StyledProperty<bool> IsCancelEnabledProperty =
         AvaloniaProperty.Register<DialogControl, bool>(nameof(IsCancelEnabled));
 
     public ICommand Command
