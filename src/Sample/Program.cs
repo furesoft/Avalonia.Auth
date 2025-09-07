@@ -7,6 +7,7 @@ using Avalonia.Auth.Embedded;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
+using Avalonia.Auth.Provider.Reddit;
 using Avalonia.Auth.Reddit;
 using Avalonia.Auth.WorldID;
 using Avalonia.WebView.Desktop;

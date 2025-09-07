@@ -34,7 +34,7 @@
       <ProjectReference Include="..\Providers\Avalonia.Auth.Github\Avalonia.Auth.Github.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Google\Avalonia.Auth.Google.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Hello\Avalonia.Auth.Hello.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Reddit\Avalonia.Auth.Reddit.csproj" />
+      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Reddit\Avalonia.Auth.Provider.Reddit.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.WorldID\Avalonia.Auth.WorldID.csproj" />
     </ItemGroup>
 </Project>

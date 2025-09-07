@@ -11,4 +11,9 @@
       <ProjectReference Include="..\..\Avalonia.Auth\Avalonia.Auth.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Assets\reddit.png" />
+      <AvaloniaResource Include="Assets\reddit.png" />
+    </ItemGroup>
+
 </Project>

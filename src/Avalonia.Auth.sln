@@ -28,7 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.WorldID", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Embedded", "Avalonia.Auth.Embedded\Avalonia.Auth.Embedded.csproj", "{94BD7159-F93A-4812-983C-9644D3ACDB5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Reddit", "Providers\Avalonia.Auth.Reddit\Avalonia.Auth.Reddit.csproj", "{CE670067-B8B8-4FA5-BD37-8F4D739E063C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Reddit", "Providers\Avalonia.Auth.Provider.Reddit\Avalonia.Auth.Provider.Reddit.csproj", "{CE670067-B8B8-4FA5-BD37-8F4D739E063C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
