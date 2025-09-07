@@ -30,6 +30,7 @@
                                    Foreground="#222"
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,10" />
+                            <Image Source="{TemplateBinding Logo}" Height="150" />
 
                             <StackPanel x:Name="PART_UsernamePasswordPanel"
                                         HorizontalAlignment="Center"
@@ -38,8 +39,7 @@
                                 <TextBox x:Name="PART_UsernameBox"
                                          Watermark="Username"
                                          Margin="0,0,0,5"
-                                         UseFloatingWatermark="True"
-                                         Height="50">
+                                         UseFloatingWatermark="True">
                                     <Interaction.Behaviors>
                                         <behaviors:FocusBehavior />
                                     </Interaction.Behaviors>
@@ -48,7 +48,6 @@
                                          Watermark="Password"
                                          Margin="0,0,0,10"
                                          UseFloatingWatermark="True"
-                                         Height="50"
                                          PasswordChar="*" />
                                 <controls:Link Title="Forgot password?"
                                                Command="{TemplateBinding ForgotPasswordCommand}"
