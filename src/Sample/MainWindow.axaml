@@ -20,6 +20,7 @@
         <StackPanel Orientation="Horizontal" IsVisible="{Binding IsAuthenticated}">
             <TextBlock Text="Welcome "  />
             <TextBlock Text="{auth:PrincipalName}"  />
+            <TextBlock Text="{auth:Claim 'email'}"  />
         </StackPanel>
     </StackPanel>
 </Window>

@@ -13,8 +13,7 @@ public partial class Session : ObservableObject
     {
         return new Binding(path)
         {
-            Source = this,
-            TargetNullValue = "Not logged in"
+            Source = this
         };
     }
 }
