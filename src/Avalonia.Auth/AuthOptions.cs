@@ -10,7 +10,6 @@ public class AuthOptions
     internal bool EnableUsernamePassword => UsernamePasswordProvider != null;
     public bool ShowForgotPasswordLink { get; set; } = true;
     public bool ShowRegisterLink { get; set; } = true;
-    public bool MinimalMode { get; set; }
 
     public IUsernamePasswordProvider? UsernamePasswordProvider { get; private set; }
     public IExternalProviderVerification? ExternalProviderVerification { get; private set; }

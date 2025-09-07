@@ -28,7 +28,6 @@ class Program
             .WithAuth(_ =>
             {
                 _.ShowRegisterLink = false;
-                _.MinimalMode = true;
 
                 _.UseUsernamePasswordProvider<SampleUsernamePasswordProvider>();
 

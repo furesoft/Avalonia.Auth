@@ -14,7 +14,7 @@
     <StackPanel Margin="20" Spacing="20" x:DataType="sample:MainWindowViewModel">
         <auth:AuthContext AuthenticatedCommand="{Binding AuthenticatedCommand}"
                               IsVisible="{Binding !IsAuthenticated}"
-                              Logo="avares://Sample/Assets/logo.png"
+                              Logo="avares://Sample/Assets/logo.png" MinimalMode="False"
         />
 
         <StackPanel Orientation="Horizontal" IsVisible="{Binding IsAuthenticated}">
