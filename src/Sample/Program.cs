@@ -7,6 +7,7 @@ using Avalonia.Auth.Embedded;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
+using Avalonia.Auth.Providers.Microsoft;
 using Avalonia.Auth.WorldID;
 using Avalonia.WebView.Desktop;
 
@@ -36,8 +37,9 @@ class Program
                 _.AddProvider<DiscordProvider>();
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<WorldIdProvider>();
+                _.AddProvider<MicrosoftProvider>();
 
-                _.UseEmbeddedAuth();
+                _.UseBrowserAuth();
             })
             .WithInterFont()
             .UseDesktopWebView()
