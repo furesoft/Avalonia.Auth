@@ -37,6 +37,7 @@ class Program
                     _.ClientId = "T9PvTJOweIk0HraP0TOW0B4I0RwmvkjS";
                 });
 
+                _.AddProvider<Auth0Provider>();
                 _.AddProvider<GoogleProvider>();
                 _.AddProvider<GithubProvider>();
                 _.AddProvider<DiscordProvider>();
