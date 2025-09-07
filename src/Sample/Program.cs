@@ -7,6 +7,7 @@ using Avalonia.Auth.Embedded;
 using Avalonia.Auth.Github;
 using Avalonia.Auth.Google;
 using Avalonia.Auth.Hello;
+using Avalonia.Auth.Reddit;
 using Avalonia.Auth.WorldID;
 using Avalonia.WebView.Desktop;
 
@@ -36,6 +37,7 @@ class Program
                 _.AddProvider<DiscordProvider>();
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<WorldIdProvider>();
+                _.AddProvider<RedditProvider>();
 
                 _.UseEmbeddedAuth();
             })
