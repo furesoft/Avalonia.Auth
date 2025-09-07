@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
+using Duende.IdentityModel.Client;
 
 namespace Avalonia.Auth.Provider.Auth0;
 
@@ -16,27 +17,19 @@ public class Auth0CredentialsProvider : ICredentialsProvider
 
     public async Task<bool> AuthenticateAsync(string username, string password)
     {
-        var request = new HttpRequestMessage(HttpMethod.Post, $"https://{Domain}/oauth/token");
-        var body = new
+        var client = new HttpClient();
+
+        var response = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
         {
-            grant_type = "password",
-            username,
-            password,
-            audience = $"https://{Domain}/api/v2/",
-            client_id = ClientId,
-            scope = "openid profile email"
-        };
-        var json = JsonSerializer.Serialize(body);
-        request.Content = new StringContent(json, Encoding.UTF8, "application/json");
+            Address = $"https://{Domain}/oauth/token",
 
-        var response = await _httpClient.SendAsync(request);
-        if (!response.IsSuccessStatusCode)
-            return false;
+            ClientId = ClientId,
+            Scope = "openid profile email",
 
-        var responseContent = await response.Content.ReadAsStringAsync();
-        using var doc = JsonDocument.Parse(responseContent);
+            UserName = username,
+            Password = password
+        });
 
-        //todo: store the token in Session
-        return doc.RootElement.TryGetProperty("access_token", out _);
+        return !response.IsError;
     }
 }
