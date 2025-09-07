@@ -28,7 +28,7 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 
 2. Install Providers
    ```shell
-   dotnet add package Avalonia.Auth.Github
+   dotnet add package Avalonia.Auth.Provider.Github
    ```
 
 3. Configure in Program.cs in BuildAvaloniaApp()
