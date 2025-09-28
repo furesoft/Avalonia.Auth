@@ -10,13 +10,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Avalonia" Version="11.3.5" />
+      <PackageReference Include="Avalonia" Version="11.3.6" />
       <PackageReference Include="Avalonia.Xaml.Interactivity" Version="11.3.0.6" />
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
       <PackageReference Include="Deadpikle.AvaloniaProgressRing" Version="0.10.10" />
       <PackageReference Include="Duende.IdentityModel.OidcClient" Version="6.0.1" />
       <PackageReference Include="Material.Icons.Avalonia" Version="3.0.0-preview3.1" />
-      <PackageReference Include="Splat" Version="16.1.1" />
+      <PackageReference Include="Splat" Version="17.1.1" />
     </ItemGroup>
 
     <ItemGroup>

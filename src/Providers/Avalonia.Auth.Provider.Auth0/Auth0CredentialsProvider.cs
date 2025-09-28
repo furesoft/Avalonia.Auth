@@ -1,6 +1,4 @@
-﻿using System.Text;
-using System.Text.Json;
-using Duende.IdentityModel.Client;
+﻿using Duende.IdentityModel.Client;
 
 namespace Avalonia.Auth.Provider.Auth0;
 
@@ -25,9 +23,15 @@ public class Auth0CredentialsProvider : ICredentialsProvider
 
             ClientId = ClientId,
             Scope = "openid profile email",
-
+            GrantType = "password",
             UserName = username,
             Password = password
+        });
+
+        var userinfo = await client.GetUserInfoAsync(new UserInfoRequest()
+        {
+            Token = response.AccessToken,
+            Address = $"https://{Domain}/oauth/userinfo"
         });
 
         return !response.IsError;
