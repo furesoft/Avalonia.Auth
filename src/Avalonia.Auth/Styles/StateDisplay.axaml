@@ -1,6 +1,6 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="http://furesoft.de/schemas/auth"
+        xmlns:controls="http://furesoft.de/schemas/auth" x:CompileBindings="False"
         xmlns:ring="clr-namespace:AvaloniaProgressRing;assembly=AvaloniaProgressRing"
         xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
     <Style Selector="controls|StateDisplay">

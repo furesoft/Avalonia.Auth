@@ -2,7 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
         xmlns:modal="clr-namespace:Avalonia.Auth.Controls.Modal"
-        xmlns:behaviors="clr-namespace:Avalonia.Auth.Behaviors">
+        xmlns:behaviors="clr-namespace:Avalonia.Auth.Behaviors"
+        x:CompileBindings="False"
+        >
 
     <Style Selector="controls|AuthContext">
         <Setter Property="Background" Value="#e2e2e2" />
@@ -37,17 +39,17 @@
                                         IsVisible="{Binding Options.EnableUsernamePassword, RelativeSource={RelativeSource TemplatedParent}}"
                                         Spacing="5">
                                 <TextBox x:Name="PART_UsernameBox"
-                                         Watermark="Username"
+                                         PlaceholderText="Username"
                                          Margin="0,0,0,5"
-                                         UseFloatingWatermark="True">
-                                    <Interaction.Behaviors>
+                                         UseFloatingPlaceholder="True">
+                                   <!-- <Interaction.Behaviors>
                                         <behaviors:FocusBehavior />
-                                    </Interaction.Behaviors>
+                                    </Interaction.Behaviors>-->
                                 </TextBox>
                                 <TextBox x:Name="PART_PasswordBox"
-                                         Watermark="Password"
+                                         PlaceholderText="Password"
                                          Margin="0,0,0,10"
-                                         UseFloatingWatermark="True"
+                                         UseFloatingPlaceholder="True"
                                          PasswordChar="*" />
                                 <controls:Link Title="Forgot password?"
                                                Command="{TemplateBinding ForgotPasswordCommand}"

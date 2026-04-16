@@ -12,7 +12,7 @@ public class AuthOptions
     public bool ShowRegisterLink { get; set; } = true;
 
     public ICredentialsProvider? CredentialProvider { get; private set; }
-    public IExternalProviderVerification? ExternalProviderVerification { get; private set; }
+    internal BrowserVerification ExternalProviderVerification = new();
 
     public AuthOptions AddProvider<TProvider, TOptions>(
         Action<TOptions> configureOptions)
@@ -52,13 +52,6 @@ public class AuthOptions
         CredentialProvider = new TProvider();
         configurer((TProvider)CredentialProvider);
 
-        return this;
-    }
-
-    public AuthOptions UseExternalProviderVerification<TVerification>()
-        where TVerification : IExternalProviderVerification, new()
-    {
-        ExternalProviderVerification = new TVerification();
         return this;
     }
 }

@@ -10,16 +10,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.3.6" />
-        <PackageReference Include="Avalonia.Desktop" Version="11.3.6" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.6" />
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.6" />
+        <PackageReference Include="Avalonia" Version="12.0.1" />
+        <PackageReference Include="Avalonia.Desktop" Version="12.0.1" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.1" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.1" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.6">
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.14">
             <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,14 +28,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Avalonia.Auth\Avalonia.Auth.csproj" />
-      <ProjectReference Include="..\Browsers\Avalonia.Auth.Browser\Avalonia.Auth.Browser.csproj" />
-      <ProjectReference Include="..\Browsers\Avalonia.Auth.Embedded\Avalonia.Auth.Embedded.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Auth0\Avalonia.Auth.Provider.Auth0.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Discord\Avalonia.Auth.Provider.Discord.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Github\Avalonia.Auth.Provider.Github.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Google\Avalonia.Auth.Provider.Google.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Hello\Avalonia.Auth.Provider.Hello.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Microsoft\Avalonia.Auth.Provider.Microsoft.csproj" />
-      <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.WorldID\Avalonia.Auth.Provider.WorldID.csproj" />
     </ItemGroup>
 </Project>
