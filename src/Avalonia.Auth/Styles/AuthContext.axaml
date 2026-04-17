@@ -2,7 +2,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:Avalonia.Auth.Controls"
         xmlns:modal="clr-namespace:Avalonia.Auth.Controls.Modal"
-        xmlns:behaviors="clr-namespace:Avalonia.Auth.Behaviors"
         x:CompileBindings="False"
         >
 
