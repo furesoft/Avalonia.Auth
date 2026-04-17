@@ -7,6 +7,7 @@ using Avalonia.Auth.Provider.Github;
 using Avalonia.Auth.Provider.Google;
 using Avalonia.Auth.Provider.Hello;
 using Avalonia.Auth.Provider.Microsoft;
+using Avalonia.Auth.Provider.Twitch;
 
 namespace Sample;
 
@@ -39,6 +40,7 @@ class Program
                 _.AddProvider<DiscordProvider>();
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<MicrosoftProvider>();
+                _.AddProvider<TwitchProvider>();
             })
             .WithInterFont()
             .LogToTrace();

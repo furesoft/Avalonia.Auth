@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Micr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Auth0", "Providers\Avalonia.Auth.Provider.Auth0\Avalonia.Auth.Provider.Auth0.csproj", "{440102DC-0226-4A30-A901-AA4F72FF7D55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.Auth.Provider.Twitch", "Providers\Avalonia.Auth.Provider.Twitch\Avalonia.Auth.Provider.Twitch.csproj", "{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{440102DC-0226-4A30-A901-AA4F72FF7D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440102DC-0226-4A30-A901-AA4F72FF7D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440102DC-0226-4A30-A901-AA4F72FF7D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17E63E8E-BCA4-4A14-B6F0-C42D02C49AEA} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
@@ -75,5 +81,6 @@ Global
 		{0A43F2B3-294D-4309-9523-A30919FF6916} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 		{E71227CC-5736-4C0E-8EEF-FD492AE384E0} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 		{440102DC-0226-4A30-A901-AA4F72FF7D55} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
+		{3492EA1F-9A1E-48D6-969C-8A8D3156F0B8} = {5432FED4-2A2C-4E12-B413-56869F59B9E7}
 	EndGlobalSection
 EndGlobal

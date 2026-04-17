@@ -23,7 +23,7 @@ internal class BrowserVerification
     }
     public async Task<bool> Open(OAuthOptions options)
     {
-        var redirectUri = options.UseHostUriRedirectUrl ? "http://localhost:7890/" : "http://127.0.0.1:7890/";
+        var redirectUri = options.UseHostUriRedirectUrl ? "https://localhost/" : "https://127.0.0.1/";
 
         options.RedirectUri ??= redirectUri;
         options.Policy.Discovery.ValidateEndpoints = false;
@@ -34,7 +34,7 @@ internal class BrowserVerification
         var topLevelView = GetTopLevel();
         var authOptions = new WebAuthenticatorOptions(
             RequestUri: new Uri(state.StartUrl),
-            RedirectUri: new Uri(redirectUri));
+            RedirectUri: new Uri(options.RedirectUri));
 
         var rawUrl = await WebAuthenticationBroker.AuthenticateAsync(topLevelView, authOptions);
 
