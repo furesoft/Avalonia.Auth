@@ -15,6 +15,9 @@ public abstract class AuthProvider
     public virtual string Label { get; }
     public virtual Color Background { get; } = Colors.Gray;
     public virtual Color Foreground { get; } = Colors.White;
+
+    public abstract string ProviderName { get; }
+
     public virtual IImage? Icon
     {
         get
