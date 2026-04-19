@@ -8,7 +8,7 @@
 ![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/nuget/Avalonia.Auth)
 [![](https://tokei.rs/b1/github/furesoft/Avalonia.Auth)](https://github.com/furesoft/Avalonia.Auth)
 
-Avalonia.Auth is a flexible and modern authentication library for Avalonia UI applications. It provides reusable UI components and easy integration of OAuth providers such as Google, GitHub, and Hello.
+Avalonia.Auth is a flexible and modern authentication library for Avalonia UI applications. It provides reusable UI components and easy integration of OAuth providers such as Google, GitHub, and Hello. The OAuth Authentication is based on the new [WebAuthenticationBroker](https://docs.avaloniaui.net/controls/web/webauthenticationbroker)
 
 ## Features
 
