@@ -2,12 +2,12 @@
 
 namespace Avalonia.Auth.OAuth;
 
-public class OAuthProvider<TOptions> : AuthProvider
-    where TOptions : OAuthOptions
+public abstract class OAuthProvider<TOptions> : AuthProvider
+    where TOptions : OAuthOptions, new()
 {
     public sealed override Task<bool> Authenticate()
     {
         var options = GetOptions<TOptions>();
-        return Locator.Current.GetService<AuthOptions>()?.ExternalProviderVerification?.Open(options);
+        return Locator.Current.GetService<AuthOptions>()?.ExternalProviderVerification.Open(options)!;
     }
 }

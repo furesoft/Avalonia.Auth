@@ -8,6 +8,7 @@ public class DiscordProvider : OAuthProvider<DiscordOptions>
     public override string Label => "Login with Discord";
     public override Color Background => Color.Parse("#5865F2");
     public override Color Foreground => Color.Parse("#FFFFFF");
+    public override string ProviderName => "Discord";
 
     protected override IImage? GetIconInternal()
     {

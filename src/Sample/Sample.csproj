@@ -35,4 +35,10 @@
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Microsoft\Avalonia.Auth.Provider.Microsoft.csproj" />
       <ProjectReference Include="..\Providers\Avalonia.Auth.Provider.Twitch\Avalonia.Auth.Provider.Twitch.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <None Update=".env">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@ public class HelloProvider : OAuthProvider<HelloOptions>
     public override string Label => "Continue with Hellō";
     public override Color Background => Color.Parse("#000000");
     public override Color Foreground => Color.Parse("#ffffff");
+    public override string ProviderName => "Hello";
 
     protected override IImage? GetIconInternal()
     {

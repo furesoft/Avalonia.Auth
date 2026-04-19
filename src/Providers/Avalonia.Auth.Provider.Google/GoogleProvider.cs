@@ -8,6 +8,7 @@ public class GoogleProvider : OAuthProvider<GoogleOptions>
     public override string Label => "Login with Google";
     public override Color Background => Color.Parse("#ffffff");
     public override Color Foreground => Color.Parse("#3c4043");
+    public override string ProviderName => "Google";
 
     protected override IImage? GetIconInternal()
     {

@@ -8,6 +8,7 @@ public class Auth0Provider : OAuthProvider<Auth0Options>
     public override string Label => "Login with Auth0";
     public override Color Background => Color.Parse("#EB5424"); // Auth0 Orange
     public override Color Foreground => Color.Parse("#FFFFFF"); // Weiß
+    public override string ProviderName => "Auth0";
 
     protected override IImage? GetIconInternal()
     {

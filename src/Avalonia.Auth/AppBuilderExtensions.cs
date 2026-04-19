@@ -1,5 +1,6 @@
-using Splat;
 using Avalonia.Metadata;
+using DotNetEnv;
+using Splat;
 
 [assembly: XmlnsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.Controls")]
 [assembly: XmlnsDefinition("http://furesoft.de/schemas/auth", "Avalonia.Auth.MarkupExtensions")]
@@ -17,6 +18,19 @@ public static class LoginAppBuilderExtensions
             Locator.CurrentMutable.RegisterConstant(options);
 
             Locator.CurrentMutable.RegisterConstant(new Session());
+
+#if ANDROID
+                var assets = Android.App.Application.Context.Assets;
+                using var stream = assets.Open(".env"); // Name wie im AndroidAsset
+                DotNetEnv.Env.Load(stream);
+#else
+#if DEBUG
+            var envFile = ".env";
+#elif RELEASE
+            var envFile = "local.env";
+#endif
+            Env.TraversePath().Load(envFile);
+#endif
         });
 
         return builder;
