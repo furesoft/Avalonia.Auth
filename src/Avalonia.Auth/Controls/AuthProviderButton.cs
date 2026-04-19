@@ -91,10 +91,21 @@ internal class AuthProviderButton : Button
                 Provider.Context.AuthenticatedCommand?.Execute(session);
             }
         }
+        catch (OperationCanceledException)
+        {
+            State = AuthProviderButtonState.Normal;
+            ErrorMessage = null;
+        }
         catch (Exception ex)
         {
             State = AuthProviderButtonState.Error;
             ErrorMessage = ex.Message;
+        }
+        finally
+        {
+            // Ensure we don't stay in Loading state if Authenticate completed without setting state.
+            if (State == AuthProviderButtonState.Loading)
+                State = AuthProviderButtonState.Normal;
         }
     }
 
