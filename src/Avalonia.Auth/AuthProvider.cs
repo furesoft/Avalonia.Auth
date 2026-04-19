@@ -9,7 +9,6 @@ namespace Avalonia.Auth;
 
 public abstract class AuthProvider
 {
-    private IImage? _icon;
     private bool _iconInitialized;
 
     public virtual string Label { get; }
@@ -24,10 +23,10 @@ public abstract class AuthProvider
         {
             if (!_iconInitialized)
             {
-                _icon = GetIconInternal();
+                field = GetIconInternal();
                 _iconInitialized = true;
             }
-            return _icon;
+            return field;
         }
     }
     public AuthContext Context { get; internal set; } = null!;
@@ -63,10 +62,8 @@ public abstract class AuthProvider
                 var css = $"svg {{ fill: {cssColor}; }}";
                 return new SvgImage { Source = SvgSource.LoadFromStream(stream), Css = css};
             }
-            else
-            {
-                return new Bitmap(AssetLoader.Open(new Uri(uri)));
-            }
+
+            return new Bitmap(AssetLoader.Open(new Uri(uri)));
         }
         catch
         {
@@ -74,13 +71,14 @@ public abstract class AuthProvider
         }
     }
 
-    protected TOptions? GetOptions<TOptions>() where TOptions : class
+    protected TOptions GetOptions<TOptions>() where TOptions : class, IOptions, new()
     {
         var options = (TOptions?)Locator.Current.GetService(typeof(TOptions));
 
         if (options is null)
         {
-            options = Activator.CreateInstance<TOptions>();
+            options = new TOptions();
+            options.Load(this);
             Locator.CurrentMutable.RegisterConstant(options);
         }
 

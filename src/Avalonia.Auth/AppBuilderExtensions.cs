@@ -17,6 +17,7 @@ public static class LoginAppBuilderExtensions
             Locator.CurrentMutable.RegisterConstant(options);
 
             Locator.CurrentMutable.RegisterConstant(new Session());
+            DotNetEnv.Env.TraversePath().Load();
         });
 
         return builder;
