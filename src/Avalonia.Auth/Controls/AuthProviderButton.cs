@@ -22,10 +22,19 @@ internal class AuthProviderButton : Button
     public static readonly StyledProperty<AuthProviderButtonState> StateProperty =
         AvaloniaProperty.Register<AuthProviderButton, AuthProviderButtonState>(nameof(State), AuthProviderButtonState.Normal);
 
+    public static readonly StyledProperty<string?> ErrorMessageProperty =
+        AvaloniaProperty.Register<AuthProviderButton, string?>(nameof(ErrorMessage));
+
     public AuthProviderButtonState State
     {
         get => GetValue(StateProperty);
         set => SetValue(StateProperty, value);
+    }
+
+    public string? ErrorMessage
+    {
+        get => GetValue(ErrorMessageProperty);
+        set => SetValue(ErrorMessageProperty, value);
     }
 
     public IImage Icon
@@ -82,9 +91,10 @@ internal class AuthProviderButton : Button
                 Provider.Context.AuthenticatedCommand?.Execute(session);
             }
         }
-        catch
+        catch (Exception ex)
         {
             State = AuthProviderButtonState.Error;
+            ErrorMessage = ex.Message;
         }
     }
 

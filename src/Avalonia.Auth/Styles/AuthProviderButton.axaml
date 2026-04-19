@@ -16,7 +16,8 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="1.5"
                         Background="{TemplateBinding Background}"
-                        Padding="14,8">
+                        Padding="14,8"
+                        ToolTip.Tip="{TemplateBinding ErrorMessage}">
                     <controls:StateDisplay State="{TemplateBinding State}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
                             <Image Source="{TemplateBinding Icon}"
@@ -38,7 +39,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
-                        ToolTip.Tip="{TemplateBinding Label}"
+                        ToolTip.Tip="{Binding Path=ErrorMessage, RelativeSource={RelativeSource TemplatedParent}, FallbackValue={Binding Path=Label, RelativeSource={RelativeSource TemplatedParent}}}"
                         Margin="{TemplateBinding Margin}"
                         CornerRadius="90"
                         BorderBrush="{TemplateBinding BorderBrush}"

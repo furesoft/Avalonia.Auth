@@ -42,8 +42,7 @@ internal class BrowserVerification
 
         if (result.IsError)
         {
-            Console.WriteLine("\n\nError:\n{0}", result.Error);
-            return false;
+            throw new Exception(result.Error);
         }
 
         var session = Locator.Current.GetService<Session>()!;
