@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+    <PropertyGroup>
+        <Description>Avalonia.Auth provider for Auth0 OAuth authentication.</Description>
+    </PropertyGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\..\Avalonia.Auth\Avalonia.Auth.csproj" />
     </ItemGroup>

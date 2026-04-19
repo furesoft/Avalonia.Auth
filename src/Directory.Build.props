@@ -9,5 +9,16 @@
   <PropertyGroup Label="Package">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/furesoft/Avalonia.Auth</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/furesoft/Avalonia.Auth</PackageProjectUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	<Authors>Furesoft</Authors>
+	<Company>Furesoft</Company>
+	<PackageTags>Avalonia Auth OAuth</PackageTags>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<Deterministic>true</Deterministic>
   </PropertyGroup>
 </Project>
