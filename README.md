@@ -36,7 +36,6 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
    .WithAuth(_ =>
    {
        _.AddProvider<GithubProvider>();
-       _.UseBrowserAuth();
    })
    ```
 4. Add the AuthContext to your Window:
@@ -67,4 +66,4 @@ The AuthContext has two mode (Minimal, Default). When minimal mode is selected t
 - Helló
 - Github
 - Discord
-- WorldID
+- Auth0

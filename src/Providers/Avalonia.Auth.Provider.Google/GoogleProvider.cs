@@ -9,5 +9,8 @@ public class GoogleProvider : OAuthProvider<GoogleOptions>
     public override Color Background => Color.Parse("#ffffff");
     public override Color Foreground => Color.Parse("#3c4043");
 
-    public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Provider.Google/Assets/google.svg");
+    protected override IImage? GetIconInternal()
+    {
+        return GetIcon("avares://Avalonia.Auth.Provider.Google/Assets/google.svg");
+    }
 }

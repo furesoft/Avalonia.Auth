@@ -7,6 +7,10 @@ public class GithubProvider : OAuthProvider<GithubOptions>
 {
     public override string Label => "Login with Github";
     public override Color Background => Color.Parse("#ffffff");
-    public override Color Foreground => Color.Parse("#000000");
-    public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Provider.Github/Assets/github.svg");
+    public override Color Foreground => Color.Parse("#24292e");
+
+    protected override IImage? GetIconInternal()
+    {
+        return GetIcon("avares://Avalonia.Auth.Provider.Github/Assets/github.svg");
+    }
 }

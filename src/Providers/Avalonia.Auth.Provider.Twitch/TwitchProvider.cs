@@ -5,8 +5,12 @@ namespace Avalonia.Auth.Provider.Twitch;
 
 public class TwitchProvider : OAuthProvider<TwitchOptions>
 {
-    public override string Label => "Login with Microsoft";
-    public override Color Background => Color.Parse("#24292e");
+    public override string Label => "Login with Twitch";
+    public override Color Background => Color.Parse("#9146FF");
     public override Color Foreground => Color.Parse("#ffffff");
-    public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Provider.Twitch/Assets/twitch.svg");
+
+    protected override IImage? GetIconInternal()
+    {
+        return GetIcon("avares://Avalonia.Auth.Provider.Twitch/Assets/twitch.svg");
+    }
 }
