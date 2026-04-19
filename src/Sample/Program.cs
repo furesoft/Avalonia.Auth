@@ -4,6 +4,7 @@ using Avalonia.Auth;
 using Avalonia.Auth.Provider.Auth0;
 using Avalonia.Auth.Provider.Discord;
 using Avalonia.Auth.Provider.Github;
+using Avalonia.Auth.Provider.GitLab;
 using Avalonia.Auth.Provider.Google;
 using Avalonia.Auth.Provider.Hello;
 using Avalonia.Auth.Provider.Microsoft;
@@ -41,6 +42,7 @@ class Program
                 _.AddProvider<HelloProvider>();
                 _.AddProvider<MicrosoftProvider>();
                 _.AddProvider<TwitchProvider>();
+                _.AddProvider<GitLabProvider>();
             })
             .WithInterFont()
             .LogToTrace();

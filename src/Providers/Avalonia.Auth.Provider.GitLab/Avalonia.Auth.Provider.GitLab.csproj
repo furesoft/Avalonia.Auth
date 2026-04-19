@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Avalonia.Auth provider for GitLab OAuth authentication.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Avalonia.Auth\Avalonia.Auth.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+
+</Project>
