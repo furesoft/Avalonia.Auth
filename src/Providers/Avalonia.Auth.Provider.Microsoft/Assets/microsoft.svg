@@ -1,0 +1,8 @@
+﻿<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+  <!-- Microsoft Logo: 4 squares in 2x2 grid -->
+  <rect x="2" y="2" width="8" height="8" fill="currentColor"/>
+  <rect x="14" y="2" width="8" height="8" fill="currentColor"/>
+  <rect x="2" y="14" width="8" height="8" fill="currentColor"/>
+  <rect x="14" y="14" width="8" height="8" fill="currentColor"/>
+</svg>
+

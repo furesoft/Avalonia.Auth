@@ -9,5 +9,5 @@ public class Auth0Provider : OAuthProvider<Auth0Options>
     public override Color Background => Color.Parse("#EB5424"); // Auth0 Orange
     public override Color Foreground => Color.Parse("#FFFFFF"); // Weiß
 
-    public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Provider.Auth0/Assets/auth0.png");
+    public override IImage? Icon { get; } = GetIcon("avares://Avalonia.Auth.Provider.Auth0/Assets/auth0.svg");
 }

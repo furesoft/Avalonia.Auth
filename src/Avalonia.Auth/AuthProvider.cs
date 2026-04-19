@@ -2,6 +2,7 @@
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using Avalonia.Svg.Skia;
 using Splat;
 
 namespace Avalonia.Auth;
@@ -20,15 +21,23 @@ public abstract class AuthProvider
     }
 
     /// <summary>
-    /// Loads an icon from the specified URI.
+    /// Loads an icon from the specified URI. Supports both bitmap and SVG formats.
     /// </summary>
-    /// <param name="uri"></param>
-    /// <returns></returns>
+    /// <param name="uri">The URI to the icon file (supports .png, .jpg, .svg)</param>
+    /// <returns>An IImage containing the loaded icon, or null if loading fails</returns>
     protected static IImage? GetIcon(string uri)
     {
         try
         {
-            return new Bitmap(AssetLoader.Open(new Uri(uri)));
+            if (uri.EndsWith(".svg", StringComparison.OrdinalIgnoreCase))
+            {
+                var stream = AssetLoader.Open(new Uri(uri));
+                return new SvgImage { Source = SvgSource.LoadFromStream(stream) };
+            }
+            else
+            {
+                return new Bitmap(AssetLoader.Open(new Uri(uri)));
+            }
         }
         catch
         {
