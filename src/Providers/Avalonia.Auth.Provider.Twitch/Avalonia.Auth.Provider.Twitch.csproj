@@ -9,8 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="Assets\twitch.png" />
-        <AvaloniaResource Include="Assets\twitch.png" />
+        <AvaloniaResource Include="Assets\**" />
     </ItemGroup>
 
 </Project>
