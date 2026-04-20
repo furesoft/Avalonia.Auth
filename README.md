@@ -23,7 +23,6 @@ Avalonia.Auth is a flexible and modern authentication library for Avalonia UI ap
 1. Install the NuGet packages:
    ```shell
    dotnet add package Avalonia.Auth
-   dotnet add package Avalonia.Auth.BrowserAuth
    ```
 
 2. Install Providers
@@ -51,7 +50,7 @@ All providers that implement `AuthProvider` will be automatically displayed, whe
 
 | :warning: Important           |
 |:----------------------------|
-| If no UsernamePasswordProvider is configured the username and password fields are hidden.  For Authentication an external Auth provider has to be registered (BrowserAuth or EmbeddedAuth) |
+| If no UsernamePasswordProvider is configured the username and password fields are hidden. |
 
 ## Sample Application
 
@@ -61,9 +60,3 @@ A sample application demonstrating usage can be found in the `Sample` folder.
 
 The AuthContext has two mode (Minimal, Default). When minimal mode is selected the icons of the providers will be smaller.   
 
-## Providers supported
-- Google
-- Helló
-- Github
-- Discord
-- Auth0
